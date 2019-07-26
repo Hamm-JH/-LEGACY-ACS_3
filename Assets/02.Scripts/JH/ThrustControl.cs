@@ -118,7 +118,7 @@ public class ThrustControl : MonoBehaviour
 				//쓰로틀 출력구함
 				throttleVal = Mathf.Pow((throttle + 0.45f), 2);
 				//부스터 출력구함
-				boosterVal = boosterValue * Mathf.Pow((throttle - 0.5f) * 2, 2);
+				boosterVal = boosterValue * Mathf.Pow(throttle, 2);
 				//감가속치 구함(가중치 제외)
 				ADCeleration = ((throttleVal + boosterVal) / 2 - 0.4f) * 8;
 
@@ -132,14 +132,10 @@ public class ThrustControl : MonoBehaviour
 				throttleVal = throttle;
 				//부스터 출력구함
 				boosterVal = boosterValue * throttle;
-				//감가속치 구함(가중치 제외)
-				ADCeleration = (((throttleVal + boosterVal) / 2 - 0.2f) * 3)
-                               * currForce / _minimumSpeedBoundary;         //1~5까지 값을 2배함
-
-                //진입시 5에서 10까지 올라가는 수
-                //(currforce / minspeed) * 2
-                //(1, 2, 3, 4, 5) * 2
-                //10배 더올림
+                //감가속치 구함(가중치 제외)
+                ADCeleration = (((throttleVal + boosterVal) / 2 - 0.2f) * 2)
+                               * -Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 2)
+                               * 5 / 2 + 1f;
 				break;
 
 			//애프터버너 상태

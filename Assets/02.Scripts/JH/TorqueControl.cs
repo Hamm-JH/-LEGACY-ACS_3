@@ -91,7 +91,7 @@ public class TorqueControl : MonoBehaviour
 				yawVal		= controlAngle.y * 5000f
 							* (currForce / (_minSB / 5 * 4));
 				rollVal		= -controlAngle.z * 5000f
-							* (currForce / (_minSB / 20 * 19));
+							* (currForce / (_minSB / 5 * 3));
 				fighterBody.AddRelativeTorque(new Vector3(pitchVal * 1.5f
 												, yawVal * 1.5f
                                                 , rollVal * 1.5f)
@@ -101,13 +101,14 @@ public class TorqueControl : MonoBehaviour
 
 
 			case 1:
-				pitchVal	= -(controlAngle.x + 0.4f) * 50000f
-							* (_norSB / currForce);
+                pitchVal = -(controlAngle.x + 0.4f) * 50000f
+                            * Mathf.Log((currForce / _minSB) + 1.3f + Mathf.Epsilon, 2);
+							//* (_norSB / currForce);
 				yawVal		= controlAngle.y * 5000f
-							* (_norSB / currForce);
-				rollVal		= -controlAngle.z * 5000f
-							* (_norSB / currForce);
-				fighterBody.AddRelativeTorque(new Vector3(pitchVal * 2 * 3
+							* Mathf.Log((currForce / _minSB) + 1.3f + Mathf.Epsilon, 2);
+                rollVal		= -controlAngle.z * 5000f
+							* Mathf.Log((currForce / _minSB) + 1.3f + Mathf.Epsilon, 2);
+                fighterBody.AddRelativeTorque(new Vector3(pitchVal * 2 * 3
 												, yawVal * 2
                                                 , rollVal)
 												, ForceMode.Force);
@@ -116,13 +117,15 @@ public class TorqueControl : MonoBehaviour
                 //x 가속치 5배 추가
 
 			case 2:
-				pitchVal = -(controlAngle.x + 0.4f) * 50000f
-							* (_norSB / currForce);
+                float alpha = Mathf.Log(_norSB / _minSB, 2) + 1.3f;
+                pitchVal = -(controlAngle.x + 0.4f) * 50000f
+                            * alpha - Mathf.Log(alpha - currForce / _norSB);
+							//* (_norSB / currForce);
 				yawVal = controlAngle.y * 5000f
-							* (_norSB / currForce);
-				rollVal = -controlAngle.z * 5000f
-							* (_norSB / currForce);
-				fighterBody.AddRelativeTorque(new Vector3(pitchVal * 1.6f * 10
+                            * alpha - Mathf.Log(alpha - currForce / _norSB);
+                rollVal = -controlAngle.z * 5000f
+                            * alpha - Mathf.Log(alpha - currForce / _norSB);
+                fighterBody.AddRelativeTorque(new Vector3(pitchVal * 1.6f * 10
 												, yawVal * 1.6f
 												, rollVal * 1.6f)
 												, ForceMode.Force);
