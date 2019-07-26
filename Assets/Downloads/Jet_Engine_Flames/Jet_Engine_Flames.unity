@@ -433,6 +433,22 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 19822258, guid: 773a6c64a5b1f1a408b63be9e7c4ac08, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19822258, guid: 773a6c64a5b1f1a408b63be9e7c4ac08, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19822258, guid: 773a6c64a5b1f1a408b63be9e7c4ac08, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19822258, guid: 773a6c64a5b1f1a408b63be9e7c4ac08, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 773a6c64a5b1f1a408b63be9e7c4ac08, type: 3}
 --- !u!1001 &1886282997
