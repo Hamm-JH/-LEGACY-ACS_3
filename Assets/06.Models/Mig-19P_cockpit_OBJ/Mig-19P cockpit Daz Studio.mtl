@@ -1,0 +1,356 @@
+# 3ds Max Wavefront OBJ Exporter v0.94b - (c)2007 guruware
+# File Created: 07.01.2014 23:13:34
+
+newmtl panele
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.4784 0.5804 0.6000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\panels_mig19s.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\panels_mig19s.bmp
+
+newmtl wire_138008110
+	Ns 32
+	d 1
+	Tr 1
+	Tf 1 1 1
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5412 0.0314 0.4314
+	Ks 0.3500 0.3500 0.3500
+
+newmtl 01___Default
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.4784 0.5804 0.6000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\joystick.jpg
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\joystick.jpg
+
+newmtl kokpit_mig19s
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.7961 0.8000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\cockpit_mig19.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\cockpit_mig19.bmp
+
+newmtl interior_baked
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.7137 0.7333
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\interrior.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\interrior.bmp
+
+newmtl napisy_itp
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\labels.tga
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\labels.tga
+	map_d D:\Turbosquid projects\kokpity\Mig 19P\labels.tga
+
+newmtl main_bits_5
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\Mig19s_cockpit_sides.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\Mig19s_cockpit_sides.bmp
+
+newmtl front
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.7490 0.7765
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.2941 0.3745 0.3882
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\front_mig19s.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\front_mig19s.bmp
+
+newmtl Material__97
+	Ns 50.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.2700 0.2700 0.2700
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\glass_main.tga
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\glass_main.tga
+	map_d D:\Turbosquid projects\kokpity\Mig 19P\glass_main.tga
+
+newmtl gauges_1_instrumenty_targa
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\Instrumenty_mig19s.tga
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\Instrumenty_mig19s.tga
+	map_d D:\Turbosquid projects\kokpity\Mig 19P\Instrumenty_mig19s.tga
+
+newmtl orig_mig_19_panel
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7059 0.7059 0.7059
+	Ks 0.2700 0.2700 0.2700
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\Mig19s_consoles.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\Mig19s_consoles.bmp
+
+newmtl Material__89__Dashboard_
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.4588 0.5333 0.5647
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\MiG switchboxes.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\MiG switchboxes.bmp
+
+newmtl Su9_cockpit_2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\su9_cockpit2.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\su9_cockpit2.bmp
+
+newmtl Material__90
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2510 0.6863 0.7020
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\9A cockpit 1.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\9A cockpit 1.bmp
+
+newmtl la15_ks1_bits
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2510 0.6863 0.7020
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\9A cockpit 1.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\9A cockpit 1.bmp
+
+newmtl Material__96
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2510 0.6863 0.7020
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\9A cockpit 1.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\9A cockpit 1.bmp
+
+newmtl windshield_texture
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3569 0.4118 0.4353
+	Ks 0.1350 0.1350 0.1350
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\windshieldmap.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\windshieldmap.bmp
+
+newmtl mig19s_glass
+	Ns 30.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7490 0.8000 0.8000
+	Ks 0.8100 0.8100 0.8100
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\Mig19s_glass.tga
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\Mig19s_glass.tga
+	map_d D:\Turbosquid projects\kokpity\Mig 19P\Mig19s_glass.tga
+
+newmtl gunsight_gizmos
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\gunsight_box_mig19s.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\gunsight_box_mig19s.bmp
+
+newmtl hud_glass
+	Ns 50.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.2700 0.2700 0.2700
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\hud_glass_ASP-5ND.tga
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\hud_glass_ASP-5ND.tga
+	map_d D:\Turbosquid projects\kokpity\Mig 19P\hud_glass_ASP-5ND.tga
+
+newmtl 22___Default
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.5882 0.5882 0.5882
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\sov_lights.tga
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\sov_lights.tga
+	map_Ke D:\Turbosquid projects\kokpity\Mig 19P\sov_lights.tga
+	map_d D:\Turbosquid projects\kokpity\Mig 19P\sov_lights.tga
+
+newmtl glass_2
+	Ns 20.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7490 0.8000 0.8000
+	Ks 0.8100 0.8100 0.8100
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\glass2.tga
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\glass2.tga
+	map_d D:\Turbosquid projects\kokpity\Mig 19P\glass2.tga
+
+newmtl orig_16___Default
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\mig19s_misc.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\mig19s_misc.bmp
+
+newmtl konsolety
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\Mig19s_radar.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\Mig19s_radar.bmp
+
+newmtl radar
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 1.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.5333 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\Turbosquid projects\kokpity\Mig 19P\radar Izumrud1.bmp
+	map_Kd D:\Turbosquid projects\kokpity\Mig 19P\radar Izumrud1.bmp
