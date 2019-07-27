@@ -100,39 +100,46 @@ public class ThrustControl : MonoBehaviour
 		{
 			//이착륙 상태
 			case 0:
-				//- 이착륙 상태 구함
-				//쓰로틀 출력구함
-				throttleVal = Mathf.Pow((throttle + 0.45f), 2);
+                //- 이착륙 상태 구함
+                //쓰로틀 출력구함
+                throttleVal = Mathf.Pow((throttle + 0.45f), 2);
 				//부스터 출력구함
 				boosterVal = boosterValue * Mathf.Pow(throttle, 2);
 				//감가속치 구함(가중치 제외)
-				ADCeleration = ((throttleVal + boosterVal) / 2 - 0.4f) * 8;
+				ADCeleration = ((throttleVal + boosterVal));
 
                 //5배 더올림
 				break;
 
 			//일반 비행 상태
 			case 1:
-				//- 일반 비행상태 구함
-				//쓰로틀 출력구함
-				throttleVal = throttle;
+                //print(((throttleVal + boosterVal) / 2 - 0.2f) * 2);
+                //print((-Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 2)));
+                //print(5 / 2 + 1f);
+                print(((throttleVal + boosterVal) / 2 )
+                               * Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 3)
+                               + 1f);
+
+                //- 일반 비행상태 구함
+                //쓰로틀 출력구함
+                throttleVal = throttle;
 				//부스터 출력구함
 				boosterVal = boosterValue * throttle;
                 //감가속치 구함(가중치 제외)
-                ADCeleration = (((throttleVal + boosterVal) / 2 - 0.2f) * 2)
-                               * -Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 2)
-                               * 5 / 2 + 1f;
+                ADCeleration = (((throttleVal + boosterVal) / 2)
+                               * Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 3))
+                               + 1f;
 				break;
 
 			//애프터버너 상태
 			case 2:
-				//- 애프터 버너 비행상태 구함
-				//쓰로틀 출력구함
-				throttleVal = Mathf.Log(throttle + 1f, 2) - 0.4f;
-				//부스터 출력구함
-				boosterVal = boosterValue * throttle;
-				//감가속치 구함(가중치 제외)
-				ADCeleration = ((((throttleVal + boosterVal) / 2) - 0.15f) * 2) * 6;
+                //- 애프터 버너 비행상태 구함
+                //쓰로틀 출력구함
+                throttleVal = throttle;
+                //부스터 출력구함
+                boosterVal = boosterValue * throttle;
+                //감가속치 구함(가중치 제외)
+                ADCeleration = ((((throttleVal + boosterVal) / 2) - 0.15f) * 2) * 6;
 
 				//가속치 올리려고 1.2배 더 올림
                 //2배 더 올림
