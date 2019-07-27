@@ -113,13 +113,7 @@ public class ThrustControl : MonoBehaviour
 
 			//일반 비행 상태
 			case 1:
-                //print(((throttleVal + boosterVal) / 2 - 0.2f) * 2);
-                //print((-Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 2)));
-                //print(5 / 2 + 1f);
-                print(((throttleVal + boosterVal) / 2 )
-                               * Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 3)
-                               + 1f);
-
+                
                 //- 일반 비행상태 구함
                 //쓰로틀 출력구함
                 throttleVal = throttle;
@@ -139,11 +133,13 @@ public class ThrustControl : MonoBehaviour
                 //부스터 출력구함
                 boosterVal = boosterValue * throttle;
                 //감가속치 구함(가중치 제외)
-                ADCeleration = ((((throttleVal + boosterVal) / 2) - 0.15f) * 2) * 6;
+                ADCeleration = (((throttleVal + boosterVal) / 2)
+                               * Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 3))
+                               + 1f;
 
-				//가속치 올리려고 1.2배 더 올림
+                //가속치 올리려고 1.2배 더 올림
                 //2배 더 올림
-				break;
+                break;
 		}
 	}
 
