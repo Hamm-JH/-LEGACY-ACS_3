@@ -70,9 +70,21 @@ public class AviationManager : MonoBehaviour
 		_controllerAngle = inputCheck.controllerAngle;	//컨트롤러 각도 갱신
 		
 		//회전각도 정리
-		pitch	= Mathf.Clamp(_controllerAngle.x, Mathf.Epsilon - 0.8f, Mathf.Epsilon);
-		yaw		= Mathf.Clamp(_controllerAngle.y, Mathf.Epsilon - 0.7f, Mathf.Epsilon + 0.7f);
-		roll	= Mathf.Clamp(_controllerAngle.z, Mathf.Epsilon - 0.7f, Mathf.Epsilon + 0.7f);
+        if(_controllerAngle.x >= Mathf.Epsilon - 0.8 && _controllerAngle.x <= Mathf.Epsilon)
+        {
+            //-0.8에서 0 사이의 값을 받아서 -1에서 1 사이의 값으로 변환
+		    pitch	= (Mathf.Clamp(_controllerAngle.x, Mathf.Epsilon - 0.8f, Mathf.Epsilon) + 0.4f) / 4 * 10;
+        }
+        if(_controllerAngle.y >= Mathf.Epsilon - 0.7f && _controllerAngle.y <= Mathf.Epsilon + 0.7f)
+        {
+            //-0.7에서 0.7 사이의 값을 받아서 -1에서 1 사이의 값으로 변환
+		    yaw		= Mathf.Clamp(_controllerAngle.y, Mathf.Epsilon - 0.7f, Mathf.Epsilon + 0.7f) / 7 * 10;
+        }
+        if(_controllerAngle.z >= Mathf.Epsilon - 0.7f && _controllerAngle.z <= Mathf.Epsilon + 0.7f)
+        {
+            //-0.7에서 0.7 사이의 값을 받아서 -1에서 1 사이의 값으로 변환
+		    roll	= Mathf.Clamp(_controllerAngle.z, Mathf.Epsilon - 0.7f, Mathf.Epsilon + 0.7f) / 7 * 10;
+        }
 		axis	= _controllerAngle.w;
 		controlAngle = new Quaternion(pitch, yaw, roll, axis);
 
