@@ -24,7 +24,6 @@ public class ThrustControl : MonoBehaviour
 	public Quaternion controlAngle;
 
 	[Header("inputCheck")]
-	[HideInInspector] public bool booster;              //감가속치 계산에 쓸 booster변수
 	[HideInInspector] public int boosterValue;			//감가속치 계산에 쓸 booster bool값 변환 변수
 	[HideInInspector] public float throttle;            //감가속치 계산에 쓸 throttle변수
 
@@ -32,8 +31,6 @@ public class ThrustControl : MonoBehaviour
 	[HideInInspector] public float _minimumSpeedBoundary; //최소 속도경계
 	[HideInInspector] public float _normalSpeedBoundary;  //평균 속도경계
 	[HideInInspector] public float _maxSpeedBoundary;     //최대 속도경계
-
-	public float testValue = 0;
 	#endregion
 
 	#region private_value
@@ -62,18 +59,7 @@ public class ThrustControl : MonoBehaviour
 	void Update()
     {
 		//정기 상태 갱신
-		booster = aviationManager.booster;      //부스터 갱신
-		//부스터 사용값 갱신
-		switch (booster)							
-		{
-			case true:
-				boosterValue = 1;
-				break;
-
-			case false:
-				boosterValue = 0;
-				break;
-		}
+		boosterValue = aviationManager.booster;      //부스터 갱신
 		throttle = aviationManager.throttle;    //쓰로틀 갱신
 
 		controlAngle = aviationManager.controlAngle;    //회전각 갱신
@@ -157,7 +143,6 @@ public class ThrustControl : MonoBehaviour
 	//현재 추력 계산
 	private void SetCurrForce()
 	{
-		testValue = ADCeleration - TorqueResist;
 		currForce = currForce + ADCeleration - TorqueResist;    //현재속도 구하기
 		//현재 속도 최대속도면 최대속도에 고정
 		if (currForce > Mathf.Epsilon + _maxSpeedBoundary) currForce = _maxSpeedBoundary;

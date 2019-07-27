@@ -16,7 +16,7 @@ public class AviationManager : MonoBehaviour
 	#region public_values
 	[Header ("inputCheck")]
 	public ControllerInputCheck inputCheck;
-	[HideInInspector] public bool booster;			//부스터 발사 확인(트리거)
+	[HideInInspector] public int booster;			//부스터 발사 확인(트리거)
 	[HideInInspector] public float throttle;		//쓰로틀 발생 확인(트랙패드)
 	[HideInInspector] public Quaternion _controllerAngle;   //회전각도 처리용(컨트롤러 각도)
 
@@ -25,6 +25,7 @@ public class AviationManager : MonoBehaviour
 	[HideInInspector] public float yaw = 0;
 	[HideInInspector] public float roll = 0;
 	[HideInInspector] public float axis = 0;
+    [HideInInspector] public int BrkBtn = 0;
 
 	[Header ("ThrustControl")]
 	public ThrustControl thrustControl;
@@ -39,11 +40,6 @@ public class AviationManager : MonoBehaviour
 	[HideInInspector] public float minimumSpeedBoundary;
 	[HideInInspector] public float normalSpeedBoundary;
 	[HideInInspector] public float maxSpeedBoundary;
-
-    //애프터버너 이펙트 조정
-    //[Header("Engine_particle_system")]
-    //public ParticleSystem LEnParticle;
-    //public ParticleSystem REnParticle;
 
 	#endregion
 
@@ -67,7 +63,7 @@ public class AviationManager : MonoBehaviour
     {
         
 		//정기 상태 갱신코드
-		_controllerAngle = inputCheck.controllerAngle;	//컨트롤러 각도 갱신
+		_controllerAngle = inputCheck.RcontrollerAngle;	// 오른쪽 컨트롤러 각도 갱신
 		
 		//회전각도 정리
         if(_controllerAngle.x >= Mathf.Epsilon - 0.8 && _controllerAngle.x <= Mathf.Epsilon)
@@ -88,8 +84,10 @@ public class AviationManager : MonoBehaviour
 		axis	= _controllerAngle.w;
 		controlAngle = new Quaternion(pitch, yaw, roll, axis);
 
-		booster = inputCheck.booster;		//부스터 입력갱신
-		throttle = inputCheck.throttle;     //트랙패드 입력갱신
+		booster = inputCheck.booster ? 1 : 0;  		//트리거 눌렀으면 1, 안 눌렀으면 0
+		throttle = inputCheck.throttle;             //트랙패드 입력갱신
+        BrkBtn = inputCheck.menu ? 1 : 0;           //메뉴버튼 눌렀으면 1, 안 눌렀으면 0
+        
 
 		thrustControl.GetStatus(status);    //비행 상태 갱신(추력제어 쪽의 상태 갱신)
 		torqueControl.GetStatus(status);    //비행 상태 갱신(회전제어 쪽의 상태 갱신)

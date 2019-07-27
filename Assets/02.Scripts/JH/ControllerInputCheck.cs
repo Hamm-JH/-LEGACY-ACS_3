@@ -5,15 +5,23 @@ using Valve.VR;
 
 public class ControllerInputCheck : MonoBehaviour
 {
+    [Header ("Input_sources")]
+    public SteamVR_Input_Sources leftController;
 	public SteamVR_Input_Sources rightController;
 
-	public SteamVR_Action_Boolean RTriggerClicked;     //트리거 클릭 확인
-	public SteamVR_Action_Vector2 RTrackpadDragged;    //트랙패드 드래깅 확인
+    [Header("LeftHand_controller")]
+
+    [Header("RightHand_controller")]
+    public SteamVR_Action_Boolean RMenuClicked;         //메뉴 버튼 클릭 확인
+	public SteamVR_Action_Boolean RTriggerClicked;      //트리거 클릭 확인
+	public SteamVR_Action_Vector2 RTrackpadDragged;     //트랙패드 드래깅 확인
 	public SteamVR_Action_Pose RPoseTracker;
 
+    [Header ("Recalculated_values")]
 	[HideInInspector] public bool booster = false;
 	[HideInInspector] public float throttle = 0;
-	[HideInInspector] public Quaternion controllerAngle;
+	[HideInInspector] public Quaternion RcontrollerAngle;
+    [HideInInspector] public bool menu = false;
 
 	//public FlameManager testMgr;
 
@@ -21,7 +29,7 @@ public class ControllerInputCheck : MonoBehaviour
     void Update()
     {
 		//컨트롤러 각도 갱신
-		controllerAngle = RPoseTracker.localRotation;
+		RcontrollerAngle = RPoseTracker.localRotation;
 		
 		//트리거 눌렀을 때(한번)
 		if(RTriggerClicked.stateDown)
@@ -34,6 +42,17 @@ public class ControllerInputCheck : MonoBehaviour
 		{
 			booster = false;
 		}
+
+        //오른쪽 메뉴 눌렀을 때
+        if(RMenuClicked.stateDown)
+        {
+            menu = true;
+        }
+        //오른쪽 메뉴 뗐을 때
+        else if(RMenuClicked.stateUp)
+        {
+            menu = false;
+        }
 
 		//트랙패드 값 변경시
 		if(RTrackpadDragged.changed)
