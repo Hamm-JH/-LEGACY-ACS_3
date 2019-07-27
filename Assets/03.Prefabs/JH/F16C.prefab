@@ -250,7 +250,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.09, z: 4.847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8547949229010060074}
+  - {fileID: 8538369825214759073}
   m_Father: {fileID: 8547949229010060064}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 33.373, y: 0, z: 0}
@@ -313,7 +313,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8547949229177956040}
+  m_Father: {fileID: 8547949229177881108}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5124373622730284593
@@ -427,6 +427,86 @@ Transform:
   m_Father: {fileID: 8547949229010060064}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12.045}
+--- !u!1 &8538369825214759086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8538369825214759073}
+  m_Layer: 0
+  m_Name: RudderRig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8538369825214759073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8538369825214759086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8547949229010060074}
+  m_Father: {fileID: 5124373622380033522}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8538369825524290319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8538369825524658161}
+  - component: {fileID: 8538369825534563567}
+  m_Layer: 0
+  m_Name: Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8538369825524658161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8538369825524290319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8547949229177956040}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8538369825534563567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8538369825524290319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5890e3cad70bea64d91aef9145ba3454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: -1
+  modelOverride: 
+  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  verbose: 0
+  createComponents: 1
+  updateDynamically: 1
 --- !u!1 &8547949227799019615
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +565,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8547949228609312816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8547949229010060064}
@@ -504,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8711b28880998604aaea0f6a070b3eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputCheck: {fileID: 8547949229178203247}
+  inputCheck: {fileID: 5171089214428902851}
   booster: 0
   throttle: 0
   _controllerAngle: {x: 0, y: 0, z: 0, w: 0}
@@ -513,6 +593,7 @@ MonoBehaviour:
   yaw: 0
   roll: 0
   axis: 0
+  BrkBtn: 0
   thrustControl: {fileID: 8547949228609313228}
   torqueControl: {fileID: 8547949228609312819}
   status: 0
@@ -539,13 +620,11 @@ MonoBehaviour:
   ADCeleration: 0
   TorqueResist: 0
   controlAngle: {x: 0, y: 0, z: 0, w: 0}
-  booster: 0
   boosterValue: 0
   throttle: 0
   _minimumSpeedBoundary: 0
   _normalSpeedBoundary: 0
   _maxSpeedBoundary: 0
-  testValue: 0
 --- !u!114 &8547949228609312819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -866,7 +945,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &5432229852814622141
 MonoBehaviour:
@@ -887,11 +966,14 @@ MonoBehaviour:
   AileronR: {fileID: 5124373621644273909}
   ElevatorL: {fileID: 5124373623017140877}
   ElevatorR: {fileID: 5124373621131876161}
-  Rudder: {fileID: 5124373622380033522}
+  Rudder: {fileID: 8538369825214759073}
   BrakeLT: {fileID: 6837694842461334372}
   BrakeLB: {fileID: 8584708859610771506}
   BrakeRT: {fileID: 2537080256027365241}
   BrakeRB: {fileID: 4617447569333680037}
+  Epsilon: 0
+  UpTime: 0
+  DownTime: 0
 --- !u!1 &8547949229010360130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,7 +1234,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -4.411628, z: -2.8981116}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5124373622380033522}
+  m_Father: {fileID: 8538369825214759073}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8547949229007192908
@@ -2124,55 +2206,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &8547949229178172282
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8547949229177868164}
-  - component: {fileID: 8547949229183726746}
-  m_Layer: 0
-  m_Name: Model
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8547949229177868164
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8547949229178172282}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8547949229177881108}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8547949229183726746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8547949229178172282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5890e3cad70bea64d91aef9145ba3454, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  index: -1
-  modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  verbose: 0
-  createComponents: 1
-  updateDynamically: 1
 --- !u!1 &8547949229178203246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,7 +2216,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8547949229177956040}
   - component: {fileID: 8589887241197195290}
-  - component: {fileID: 8547949229178203247}
   m_Layer: 0
   m_Name: Controller (right)
   m_TagString: Untagged
@@ -2202,7 +2234,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5124373622736102703}
+  - {fileID: 8538369825524658161}
   m_Father: {fileID: 8547949229177941734}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2249,31 +2281,6 @@ MonoBehaviour:
     m_TypeName: Valve.VR.SteamVR_Behaviour_Pose_DeviceIndexChangedEvent, SteamVR,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   broadcastDeviceChanges: 1
---- !u!114 &8547949229178203247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8547949229178203246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 818d94865ded00641914a9986e4b9b4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rightController: 2
-  isTriggerClicked:
-    actionPath: /actions/default/in/Rt_GrabPinch
-    needsReinit: 0
-  isTrackpadDragged:
-    actionPath: /actions/default/in/Rt_TrackpadPos
-    needsReinit: 0
-  poseTracker:
-    actionPath: /actions/default/in/Rt_pose
-    needsReinit: 0
-  booster: 0
-  throttle: 0
-  controllerAngle: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8547949229178224414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,6 +2293,7 @@ GameObject:
   - component: {fileID: 8547949229176001976}
   - component: {fileID: 8547949229174969404}
   - component: {fileID: 8547949229183634780}
+  - component: {fileID: 5171089214428902851}
   m_Layer: 0
   m_Name: '[CameraRig]'
   m_TagString: Untagged
@@ -2382,6 +2390,36 @@ MonoBehaviour:
   - {x: -1.65, y: 0.01, z: -1.275}
   - {x: -1.65, y: 0.01, z: 1.275}
   - {x: 1.65, y: 0.01, z: 1.275}
+--- !u!114 &5171089214428902851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8547949229178224414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818d94865ded00641914a9986e4b9b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftController: 1
+  rightController: 2
+  RMenuClicked:
+    actionPath: /actions/default/in/Rt_Menu
+    needsReinit: 0
+  RTriggerClicked:
+    actionPath: /actions/default/in/Rt_GrabPinch
+    needsReinit: 0
+  RTrackpadDragged:
+    actionPath: /actions/default/in/Rt_TrackpadPos
+    needsReinit: 0
+  RPoseTracker:
+    actionPath: /actions/default/in/Rt_pose
+    needsReinit: 0
+  booster: 0
+  throttle: 0
+  RcontrollerAngle: {x: 0, y: 0, z: 0, w: 0}
+  menu: 0
 --- !u!1 &8547949229178234440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,7 +2448,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8547949229177868164}
+  - {fileID: 5124373622736102703}
   m_Father: {fileID: 8547949229177941734}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
