@@ -203,7 +203,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &292163147
+--- !u!21 &672079173
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -420,7 +420,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1594578402
+--- !u!43 &1816688756
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -654,11 +654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 292163147}
+      objectReference: {fileID: 672079173}
     - target: {fileID: 2669713773695573160, guid: d7f338e52072b47329788bdf4097255c,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1594578402}
+      objectReference: {fileID: 1816688756}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f338e52072b47329788bdf4097255c, type: 3}
