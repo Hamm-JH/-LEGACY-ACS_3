@@ -6,8 +6,15 @@ using Valve.VR;
 
 public class Sym4DManager : MonoBehaviour
 {
+    /// <summary>
+    /// Sym4D에서 pitch값과 roll 값만을 사용하여 개발을 진행했다.
+    /// 1번 업로드 : 컨트롤러와 의자 회전이 연동되도록 만들었다. 테스트 씬에서 만든 스크립트라 정리가 덜 된 상태
+    /// 2번 업로드 : 코루틴 구조 개선으로 성능 감소 개선. 의도치 않은 코루틴 실행 조정
+    /// </summary>
+    
+
     #region Values
-    [Header ("Values")]
+    [Header ("Public values")]
     public SteamVR_Input_Sources rightHand;
     public SteamVR_Action_Pose rPos;
 
@@ -19,14 +26,18 @@ public class Sym4DManager : MonoBehaviour
 
     public int xPort;   //의자 포트 받는 변수
     public int wPort;   //팬 포트 받는 변수
-    public bool XConfigCheck;   //의자 포트 설정 붙었는지 확인하는 변수
-    public bool WConfigCheck;   //팬 포트 설정 붙었는지 확인하는 변수
 
-    public bool startSetChairCheck = false; //의자 돌리는 코루틴 한번만 실행하게 만드는 변수
+    [Header ("System values")]
+    private bool XConfigCheck;   //의자 포트 설정 붙었는지 확인하는 변수
+    private bool WConfigCheck;   //팬 포트 설정 붙었는지 확인하는 변수
+
+    private bool startSetChairCheck = false; //의자 돌리는 코루틴 한번만 실행하게 만드는 변수
 
     private readonly WaitForSeconds ws = new WaitForSeconds(0.1f);
+
     #endregion
 
+    #region Start Couroutine
     IEnumerator Start()
     {
         //의자 포트번호 따오기
@@ -52,12 +63,9 @@ public class Sym4DManager : MonoBehaviour
             yield break;
         }
     }
+    #endregion
 
-    /// <summary>
-    /// Sym4D에서 pitch값과 roll 값만을 사용하여 개발을 진행했다.
-    /// 1번 업로드 : 컨트롤러와 의자 회전이 연동되도록 만들었다. 테스트 씬에서 만든 스크립트라 정리가 덜 된 상태
-    /// </summary>
-    
+    #region Update
     // Update is called once per frame
     void Update()
     {
@@ -87,7 +95,9 @@ public class Sym4DManager : MonoBehaviour
             }
         }
     }
+    #endregion
 
+    #region 의자 돌리기 코루틴
     IEnumerator SetChairAngle()
     {
         //print("Called");
@@ -102,11 +112,14 @@ public class Sym4DManager : MonoBehaviour
 
         yield return SetChairAngle();
     }
+    #endregion
 
-    //삭제될 때 포트 접속 종료(?)
+    #region 프로그램 종료시 사용하던 포트 접속 종료
+    //오브젝트 삭제될 때 포트 접속 종료 (오브젝트 기준인지 스크립트 기준인지 확인해봐야 함)
     private void OnDestroy()
     {
         Sym4DEmulator.Sym4D_X_EndContents();
         Sym4DEmulator.Sym4D_W_EndContents();
     }
+    #endregion
 }
