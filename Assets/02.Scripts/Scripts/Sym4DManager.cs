@@ -17,8 +17,12 @@ public class Sym4DManager : MonoBehaviour
     public int pitchInt;//따온 pitch를 정수형 변환
     public int rollInt; //따온 roll을 정수형 변환
 
-    public int xPort;   //의자 포트
-    public int wPort;   //팬 포트
+    public int xPort;   //의자 포트 받는 변수
+    public int wPort;   //팬 포트 받는 변수
+    public bool XConfigCheck;   //의자 포트 설정 붙었는지 확인하는 변수
+    public bool WConfigCheck;   //팬 포트 설정 붙었는지 확인하는 변수
+
+    public bool startSetChairCheck = false; //의자 돌리는 코루틴 한번만 실행하게 만드는 변수
 
     private readonly WaitForSeconds ws = new WaitForSeconds(0.1f);
     #endregion
@@ -34,12 +38,19 @@ public class Sym4DManager : MonoBehaviour
         yield return ws;
 
         //의자 Roll, Pitch 최대각도 설정
-        Sym4DEmulator.Sym4D_X_SetConfig(100, 100);
+        XConfigCheck = Sym4DEmulator.Sym4D_X_SetConfig(100, 100);
         yield return ws;
 
         //팬 최대회전수 (최대 100)
-        Sym4DEmulator.Sym4D_W_SetConfig(100);
+        WConfigCheck = Sym4DEmulator.Sym4D_W_SetConfig(100);
         yield return ws;
+
+        //정상적으로 모두 실행되었으면 코루틴 종료
+        if(xPort != 0 && wPort != 0 && XConfigCheck == true && WConfigCheck == true)
+        {
+            print("Sym4D Setting Complete.");
+            yield break;
+        }
     }
 
     /// <summary>
@@ -69,7 +80,11 @@ public class Sym4DManager : MonoBehaviour
         //의자 포트가 붙었을 때 코루틴 실행
         if(xPort != 0)
         {
-            StartCoroutine(SetChairAngle());
+            if(startSetChairCheck == false)
+            {
+                startSetChairCheck = true;              //의자돌리기 한번만 하도록 값 바꿔버림
+                StartCoroutine(SetChairAngle());        //포트 붙었으니 의자 돌리기 시작
+            }
         }
     }
 
@@ -86,5 +101,12 @@ public class Sym4DManager : MonoBehaviour
         //print("After");
 
         yield return SetChairAngle();
+    }
+
+    //삭제될 때 포트 접속 종료(?)
+    private void OnDestroy()
+    {
+        Sym4DEmulator.Sym4D_X_EndContents();
+        Sym4DEmulator.Sym4D_W_EndContents();
     }
 }
