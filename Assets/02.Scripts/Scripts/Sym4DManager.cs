@@ -10,24 +10,26 @@ public class Sym4DManager : MonoBehaviour
     /// Sym4D에서 pitch값과 roll 값만을 사용하여 개발을 진행했다.
     /// 1번 업로드 : 컨트롤러와 의자 회전이 연동되도록 만들었다. 테스트 씬에서 만든 스크립트라 정리가 덜 된 상태
     /// 2번 업로드 : 코루틴 구조 개선으로 성능 감소 개선. 의도치 않은 코루틴 실행 조정
+    /// 3번 업로드 : 외부접근구조 추가 개선(public - private)
     /// </summary>
-    
+
 
     #region Values
-    [Header ("Public values")]
+    [Header("Public values")]
     public SteamVR_Input_Sources rightHand;
     public SteamVR_Action_Pose rPos;
 
-    public float pitch; //컨트롤러에서 따온 pitch
-    public float roll;  //컨트롤러에서 따온 roll
+    private float pitch; //컨트롤러에서 따온 pitch
+    private float roll;  //컨트롤러에서 따온 roll
 
-    public int pitchInt;//따온 pitch를 정수형 변환
-    public int rollInt; //따온 roll을 정수형 변환
+    private int pitchInt;//따온 pitch를 정수형 변환
+    private int rollInt; //따온 roll을 정수형 변환
 
-    public int xPort;   //의자 포트 받는 변수
-    public int wPort;   //팬 포트 받는 변수
 
     [Header ("System values")]
+    private int xPort;   //의자 포트 받는 변수
+    private int wPort;   //팬 포트 받는 변수
+
     private bool XConfigCheck;   //의자 포트 설정 붙었는지 확인하는 변수
     private bool WConfigCheck;   //팬 포트 설정 붙었는지 확인하는 변수
 
