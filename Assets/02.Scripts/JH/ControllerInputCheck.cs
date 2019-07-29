@@ -10,20 +10,21 @@ public class ControllerInputCheck : MonoBehaviour
 	public SteamVR_Input_Sources rightController;
 
     [Header("LeftHand_controller")]
+    public SteamVR_Action_Vibration LHaptic;            //진동값 받음
+
 
     [Header("RightHand_controller")]
     public SteamVR_Action_Boolean RMenuClicked;         //메뉴 버튼 클릭 확인
 	public SteamVR_Action_Boolean RTriggerClicked;      //트리거 클릭 확인
 	public SteamVR_Action_Vector2 RTrackpadDragged;     //트랙패드 드래깅 확인
-	public SteamVR_Action_Pose RPoseTracker;
+	public SteamVR_Action_Pose RPoseTracker;            //위치값 받음
+    public SteamVR_Action_Vibration RHaptic;            //진동값 받음
 
     [Header ("Recalculated_values")]
 	[HideInInspector] public bool booster = false;
 	[HideInInspector] public float throttle = 0;
 	[HideInInspector] public Quaternion RcontrollerAngle;
     [HideInInspector] public bool menu = false;
-
-	//public FlameManager testMgr;
 
     // Update is called once per frame
     void Update()
