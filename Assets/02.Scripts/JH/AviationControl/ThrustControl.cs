@@ -19,6 +19,7 @@ public class ThrustControl : MonoBehaviour
 	public float currForce		= 0f;					//현재 추력값
 	public float ADCeleration	= 0f;					//감가속치
 	public float TorqueResist	= 0f;					//회전항력
+    public float BrakeResist    = 0f;                   //브레이크 저항력
 
 	[Header("Torque_values")]
 	public Quaternion controlAngle;
@@ -26,6 +27,7 @@ public class ThrustControl : MonoBehaviour
 	[Header("inputCheck")]
 	[HideInInspector] public int boosterValue;			//감가속치 계산에 쓸 booster bool값 변환 변수
 	[HideInInspector] public float throttle;            //감가속치 계산에 쓸 throttle변수
+    public int brakeButton;
 
 	[Header("Speed_boundary")]
 	[HideInInspector] public float _minimumSpeedBoundary; //최소 속도경계
@@ -61,6 +63,7 @@ public class ThrustControl : MonoBehaviour
 		//정기 상태 갱신
 		boosterValue = aviationManager.booster;      //부스터 갱신
 		throttle = aviationManager.throttle;    //쓰로틀 갱신
+        brakeButton = aviationManager.BrkBtn;   //브레이크 갱신
 
 		controlAngle = aviationManager.controlAngle;    //회전각 갱신
 		TorqueResist = torqueControl.TorqueResist;		//회전저항값 갱신
@@ -96,6 +99,7 @@ public class ThrustControl : MonoBehaviour
 	//감가속 변수 구함
 	private void SetADCeleration(int stat)
 	{
+        
 		switch(stat)
 		{
 			//이착륙 상태
@@ -108,8 +112,9 @@ public class ThrustControl : MonoBehaviour
 				//감가속치 구함(가중치 제외)
 				ADCeleration = ((throttleVal + boosterVal));
 
+                BrakeResist = (float)brakeButton * 10f;
                 //5배 더올림
-				break;
+                break;
 
 			//일반 비행 상태
 			case 1:
@@ -123,7 +128,8 @@ public class ThrustControl : MonoBehaviour
                 ADCeleration = (((throttleVal + boosterVal) / 2)
                                * Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 3))
                                + 1f;
-				break;
+                BrakeResist = (float)brakeButton * 10f;
+                break;
 
 			//애프터버너 상태
 			case 2:
@@ -136,7 +142,7 @@ public class ThrustControl : MonoBehaviour
                 ADCeleration = (((throttleVal + boosterVal) / 2)
                                * Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 3))
                                + 1f;
-
+                BrakeResist = (float)brakeButton * 10f;
                 //가속치 올리려고 1.2배 더 올림
                 //2배 더 올림
                 break;
@@ -146,7 +152,8 @@ public class ThrustControl : MonoBehaviour
 	//현재 추력 계산
 	private void SetCurrForce()
 	{
-		currForce = currForce + ADCeleration - TorqueResist;    //현재속도 구하기
+        print(ADCeleration - TorqueResist - BrakeResist);
+		currForce = currForce + ADCeleration - TorqueResist - BrakeResist;    //현재속도 구하기
 		//현재 속도 최대속도면 최대속도에 고정
 		if (currForce > Mathf.Epsilon + _maxSpeedBoundary) currForce = _maxSpeedBoundary;
 		//현재 속도 후진속도 최대면 후진 최저속도에 고정

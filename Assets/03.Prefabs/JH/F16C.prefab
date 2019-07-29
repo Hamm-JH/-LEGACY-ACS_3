@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5734875324896975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5734876154643406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e396e80dcf0fb9044b36fe1a331ce64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aviationManager: {fileID: 8547949228609312818}
+  throttleParticle: {fileID: 4098498435379097354}
+  afterBurnerParticle: {fileID: 5734874633022944}
 --- !u!1 &54728774566449433
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,7 +785,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &5432229852814622141
 MonoBehaviour:
@@ -2098,8 +2113,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085968290, guid: d4a350b927ba1e847b6658ea234c477c, type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4a350b927ba1e847b6658ea234c477c, type: 3}
+--- !u!198 &4098498435379097354 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5734875716887106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5734874633022944 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1085968290, guid: d4a350b927ba1e847b6658ea234c477c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5734875716887106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3965024637142192077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2169,6 +2205,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f48ccce394d0913459e5ab035108ba1a, type: 3}
+--- !u!1 &5734876154643406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3968453233702013955, guid: f48ccce394d0913459e5ab035108ba1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3965024637142192077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5734876154411206 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3968453233701811979, guid: f48ccce394d0913459e5ab035108ba1a,
@@ -2249,6 +2291,12 @@ PrefabInstance:
       objectReference: {fileID: 8547949227799019608}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f5e32978d281646926e80d6ee0bbd9, type: 3}
+--- !u!4 &7695477406768015526 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 507093870659088551, guid: e2f5e32978d281646926e80d6ee0bbd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7908986002475718657}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6604774435669504899 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3921091039555971970, guid: e2f5e32978d281646926e80d6ee0bbd9,
@@ -2261,9 +2309,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818d94865ded00641914a9986e4b9b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &7695477406768015526 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 507093870659088551, guid: e2f5e32978d281646926e80d6ee0bbd9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7908986002475718657}
-  m_PrefabAsset: {fileID: 0}

@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clouds
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010237739742, guid: fe69c79d384eb4f4f944d4ec253d357a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012464943430, guid: fe69c79d384eb4f4f944d4ec253d357a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 454
@@ -816,12 +820,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1498569308}
+      objectReference: {fileID: 1513495348}
     - target: {fileID: 7695477406765044348, guid: da4aa7b03f0ba58459336245d5521146,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1275430205}
+      objectReference: {fileID: 1200152918}
     - target: {fileID: 7677755581920439526, guid: da4aa7b03f0ba58459336245d5521146,
         type: 3}
       propertyPath: far clip plane
@@ -1083,6 +1087,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2669713773864378325, guid: d7f338e52072b47329788bdf4097255c,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2669713773694541100, guid: d7f338e52072b47329788bdf4097255c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1093,11 +1102,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1598057033}
-    - target: {fileID: 2669713773864378325, guid: d7f338e52072b47329788bdf4097255c,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f338e52072b47329788bdf4097255c, type: 3}
 --- !u!4 &1140431665 stripped
@@ -1106,7 +1110,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1140431664}
   m_PrefabAsset: {fileID: 0}
---- !u!43 &1275430205
+--- !u!43 &1200152918
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1338,7 +1342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be474d9e9c1e74bb0977ed9ee7d7d2aa, type: 3}
---- !u!21 &1498569308
+--- !u!21 &1513495348
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0

@@ -40,11 +40,13 @@ public class AfterBurnerControl : MonoBehaviour
         //애프터버너 부스터 킬때와 끌때 파티클 개수 조정
         if(aviationManager.booster == 1)
         {
+            //print("60");
             afterburnerEmissionModule.rateOverTime = 60f;
         }
         else if(aviationManager.booster == 0)
         {
-            afterburnerEmissionModule.rateOverTime = 0;
+            //print("0");
+            afterburnerEmissionModule.rateOverTime = 0f;
         }
 
         //파티클 시작속도 변환
