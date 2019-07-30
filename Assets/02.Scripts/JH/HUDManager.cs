@@ -55,5 +55,6 @@ public class HUDManager : MonoBehaviour
         controlSquare.localPosition = new Vector2(-((Mathf.Epsilon + aviationManager.roll) / 7 * 10 * 320)
                                                  , -((Mathf.Epsilon + aviationManager.pitch+0.4f) * 10 / 4 * 220) );
         //fighterBody.rotation.eulerAngles.y
+
     }
 }
