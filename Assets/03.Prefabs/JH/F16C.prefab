@@ -5078,19 +5078,6 @@ Transform:
   m_Father: {fileID: 8547949229010060064}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12.045}
---- !u!114 &1343093055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7695477406768298334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f33b69c484fa5514694f0ca1a2f98f8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputCheck: {fileID: 6604774435669504899}
 --- !u!1 &8538369825214759086
 GameObject:
   m_ObjectHideFlags: 0
@@ -5485,7 +5472,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &5432229852814622141
 MonoBehaviour:
@@ -6825,10 +6812,6 @@ PrefabInstance:
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 1085968288, guid: d4a350b927ba1e847b6658ea234c477c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
         type: 3}
       propertyPath: simulationSpeed
@@ -6956,7 +6939,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1145693843025536385, guid: f48ccce394d0913459e5ab035108ba1a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5734875324896975, guid: f48ccce394d0913459e5ab035108ba1a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f48ccce394d0913459e5ab035108ba1a, type: 3}
 --- !u!1 &5734876154643406 stripped
 GameObject:
@@ -6982,11 +6971,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: F16[CameraRig]
       objectReference: {fileID: 0}
-    - target: {fileID: 3921091039555971970, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: hapticControl
-      value: 
-      objectReference: {fileID: 1343093055}
     - target: {fileID: 3921091039555971970, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: LMenuClicked.actionPath
@@ -7017,6 +7001,11 @@ PrefabInstance:
       propertyPath: RHaptic.actionPath
       value: /actions/default/out/Haptic
       objectReference: {fileID: 0}
+    - target: {fileID: 565069428949923066, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: aviationManager
+      value: 
+      objectReference: {fileID: 8547949228609312818}
     - target: {fileID: 507093870659088551, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7072,6 +7061,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 526502072547931367, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: far clip plane
+      value: 15000
+      objectReference: {fileID: 0}
     - target: {fileID: 507220870386460834, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: inputCheck
@@ -7101,15 +7095,9 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7908986002475718657}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7695477406768298334}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 818d94865ded00641914a9986e4b9b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &7695477406768298334 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 507093870659363167, guid: e2f5e32978d281646926e80d6ee0bbd9,
-    type: 3}
-  m_PrefabInstance: {fileID: 7908986002475718657}
-  m_PrefabAsset: {fileID: 0}
