@@ -36,8 +36,13 @@ public class ControllerInputCheck : MonoBehaviour
 		if(RTriggerClicked.stateDown)
 		{
 			booster = true;
-
-		}
+        }
+        else if(RTriggerClicked.state)
+        {
+            float rand = Random.Range(0.5f, 1);
+            LHaptic.Execute(0, 0.2f, 50 * rand, 30 * rand, leftController);
+            RHaptic.Execute(0, 0.2f, 50 * rand, 30 * rand, rightController);
+        }
 		//트리거 뗐을 때(한번)
 		else if(RTriggerClicked.stateUp)
 		{

@@ -152,7 +152,6 @@ public class ThrustControl : MonoBehaviour
 	//현재 추력 계산
 	private void SetCurrForce()
 	{
-        print(ADCeleration - TorqueResist - BrakeResist);
 		currForce = currForce + ADCeleration - TorqueResist - BrakeResist;    //현재속도 구하기
 		//현재 속도 최대속도면 최대속도에 고정
 		if (currForce > Mathf.Epsilon + _maxSpeedBoundary) currForce = _maxSpeedBoundary;
