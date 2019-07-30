@@ -5,9 +5,6 @@ using Valve.VR;
 
 public class ControllerInputCheck : MonoBehaviour
 {
-    [Header("Haptic control")]
-    public HapticControl hapticControl;                 //진동 컨트롤 스크립트 받음
-
     [Header ("Input_sources")]
     public SteamVR_Input_Sources leftController;
 	public SteamVR_Input_Sources rightController;
@@ -46,7 +43,7 @@ public class ControllerInputCheck : MonoBehaviour
 		//컨트롤러 각도 갱신
 		RcontrollerAngle = RPoseTracker.localRotation;
 		
-		//트리거 눌렀을 때(한번)
+		//오른쪽 트리거 눌렀을 때(한번)
 		if(RTriggerClicked.stateDown)
 		{
 			booster = true;
@@ -56,15 +53,8 @@ public class ControllerInputCheck : MonoBehaviour
         }
         else if(RTriggerClicked.state)
         {
-            print(hapticDuration);
             float rand = Random.Range(0.5f, 1);     //랜덤 진동 크기 생성
-            hapticDuration += Time.deltaTime;       //진동실행주기 변수 갱신
-            if(hapticDuration > 0.29f)               //0.5초 지나면 1회 실행
-            {
-                hapticDuration = 0;
-                //오른쪽 버튼 누르는 동안 진동 발생
-                hapticControl.HapticOn(0.3f, rand); //햅틱컨트롤의 메서드 실행
-            }
+            HapticOn(0.3f, rand);                   //햅틱컨트롤의 메서드 실행
         }
 		//트리거 뗐을 때(한번)
 		else if(RTriggerClicked.stateUp)
@@ -97,5 +87,17 @@ public class ControllerInputCheck : MonoBehaviour
         //왼쪽 컨트롤러 메뉴 버튼은 카메라 위치 변경에 사용됨
 
         //------------------------------------왼쪽 컨트롤러 갱신 영역 끝
+    }
+
+    private void HapticOn(float duration, float rand)
+    {
+        hapticDuration += Time.deltaTime;       //진동실행주기 변수 갱신
+        if (hapticDuration > 0.29f)               //0.5초 지나면 1회 실행
+        {
+            hapticDuration = 0;
+            //오른쪽 버튼 누르는 동안 진동 발생
+            LHaptic.Execute(0, duration, 50 * rand, 35 * rand, leftController);
+            RHaptic.Execute(0, duration, 50 * rand, 35 * rand, rightController);
+        }
     }
 }

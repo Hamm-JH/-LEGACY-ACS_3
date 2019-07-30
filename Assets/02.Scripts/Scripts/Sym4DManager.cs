@@ -15,6 +15,9 @@ public class Sym4DManager : MonoBehaviour
 
 
     #region Values
+    [Header("Aviation manager")]
+    public AviationManager aviationManager;
+
     [Header("Public values")]
     public SteamVR_Input_Sources rightHand;
     public SteamVR_Action_Pose rPos;
@@ -25,15 +28,20 @@ public class Sym4DManager : MonoBehaviour
     private int pitchInt;//따온 pitch를 정수형 변환
     private int rollInt; //따온 roll을 정수형 변환
 
+    private float _currForce;   //따온 현재 속도를 받는 변수
+
+    private bool isWind;
+
 
     [Header ("System values")]
-    private int xPort;   //의자 포트 받는 변수
-    private int wPort;   //팬 포트 받는 변수
+    public int xPort;   //의자 포트 받는 변수
+    public int wPort;   //팬 포트 받는 변수
 
     private bool XConfigCheck;   //의자 포트 설정 붙었는지 확인하는 변수
     private bool WConfigCheck;   //팬 포트 설정 붙었는지 확인하는 변수
 
     private bool startSetChairCheck = false; //의자 돌리는 코루틴 한번만 실행하게 만드는 변수
+    private bool startSetPanCheck = false;  //팬 돌리는 코루틴 한번만 실행하게 만드는 변수
 
     private readonly WaitForSeconds ws = new WaitForSeconds(0.1f);
 
@@ -72,7 +80,7 @@ public class Sym4DManager : MonoBehaviour
     void Update()
     {
         //Sym4D의 회전값은 10도가 최대이며 값은 -100에서 100까지를 받도록 되어있다.
-        if (rPos.localRotation.x >= Mathf.Epsilon - 0.8 && rPos.localRotation.x <= Mathf.Epsilon)
+        if (rPos.localRotation.x >= Mathf.Epsilon - 0.8f && rPos.localRotation.x <= Mathf.Epsilon)
         {
             //-0.8에서 0 사이의 값을 받아서 -100에서 100 사이의 값으로 변환
             pitch = ((Mathf.Clamp(rPos.localRotation.x, Mathf.Epsilon - 0.8f, Mathf.Epsilon)) + 0.4f) / 4 * 1000;
@@ -86,7 +94,23 @@ public class Sym4DManager : MonoBehaviour
         //Sym4D 회전값으로 쓸 정수값으로 컨트롤러 회전값 변환
         pitchInt = (int)pitch;
         rollInt = (int)roll;
-        
+
+        //비행 상태에 따른 의자 회전, 바람 세기 조절할 변수 조정
+        switch(aviationManager.status)
+        {
+            case AviationManager.AviationStatus.BELOW_MINIMUM_SPEED:
+                _currForce = 30 * aviationManager.thrustControl.currForce / aviationManager.minimumSpeedBoundary;
+                break;
+
+            case AviationManager.AviationStatus.NORMAL_SPEED:
+                _currForce = 30 + 40 * aviationManager.thrustControl.currForce / aviationManager.normalSpeedBoundary;
+                break;
+
+            case AviationManager.AviationStatus.AFTER_BURNER:
+                _currForce = 70 + 30 * aviationManager.thrustControl.currForce / aviationManager.maxSpeedBoundary;
+                break;
+        }
+
         //의자 포트가 붙었을 때 코루틴 실행
         if(xPort != 0)
         {
@@ -96,23 +120,44 @@ public class Sym4DManager : MonoBehaviour
                 StartCoroutine(SetChairAngle());        //포트 붙었으니 의자 돌리기 시작
             }
         }
+        if(wPort != 0)
+        {
+            if(startSetPanCheck == false)
+            {
+                startSetPanCheck = true;
+                StartCoroutine(SetPanPower());
+            }
+        }
     }
     #endregion
 
     #region 의자 돌리기 코루틴
     IEnumerator SetChairAngle()
     {
-        //print("Called");
-
         Sym4DEmulator.Sym4D_X_StartContents(xPort);
         yield return ws;
 
         Sym4DEmulator.Sym4D_X_SendMosionData(rollInt, pitchInt);
         yield return ws;
 
-        //print("After");
-
         yield return SetChairAngle();
+    }
+    #endregion
+
+    #region 팬 돌리기 코루틴
+    IEnumerator SetPanPower()
+    {
+        Sym4DEmulator.Sym4D_W_StartContents(wPort);
+        yield return new WaitForSeconds(0.5f);
+
+        isWind = !isWind;
+        if (isWind)
+        {
+            Sym4DEmulator.Sym4D_W_SendMosionData((int)_currForce);
+        }
+        yield return ws;
+
+        yield return SetPanPower();
     }
     #endregion
 
