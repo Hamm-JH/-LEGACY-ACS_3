@@ -67,6 +67,11 @@ public class ControllerInputCheck : MonoBehaviour
         {
             menu = true;
         }
+        else if(RMenuClicked.state)
+        {
+            float rand = Random.Range(0.5f, 1);
+            HapticOn(0.3f, rand);
+        }
         //오른쪽 메뉴 뗐을 때
         else if(RMenuClicked.stateUp)
         {
@@ -92,7 +97,7 @@ public class ControllerInputCheck : MonoBehaviour
     private void HapticOn(float duration, float rand)
     {
         hapticDuration += Time.deltaTime;       //진동실행주기 변수 갱신
-        if (hapticDuration > 0.29f)               //0.5초 지나면 1회 실행
+        if (hapticDuration > duration - 0.1f)               //0.5초 지나면 1회 실행
         {
             hapticDuration = 0;
             //오른쪽 버튼 누르는 동안 진동 발생
