@@ -2350,9 +2350,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 507220870386460834, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
-      propertyPath: body
+      propertyPath: inputCheck
+      value: 
+      objectReference: {fileID: 6604774435669504899}
+    - target: {fileID: 507220870386460834, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: FirstPersonView
       value: 
       objectReference: {fileID: 8547949227799019608}
+    - target: {fileID: 507220870386460834, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: ThirdPersonView
+      value: 
+      objectReference: {fileID: 1437386148}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f5e32978d281646926e80d6ee0bbd9, type: 3}
 --- !u!4 &7695477406768015526 stripped

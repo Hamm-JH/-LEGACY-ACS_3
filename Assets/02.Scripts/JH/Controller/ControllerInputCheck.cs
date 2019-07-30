@@ -5,6 +5,9 @@ using Valve.VR;
 
 public class ControllerInputCheck : MonoBehaviour
 {
+    [Header("Haptic control")]
+    public HapticControl hapticControl;                 //진동 컨트롤 스크립트 받음
+
     [Header ("Input_sources")]
     public SteamVR_Input_Sources leftController;
 	public SteamVR_Input_Sources rightController;
@@ -33,6 +36,9 @@ public class ControllerInputCheck : MonoBehaviour
     [Header("Recalculated_values for SetCamPosition")]
     public bool lMenu = false;
 
+    [Header("진동 메서드 발생 주기 컨트롤")]
+    private float hapticDuration = 0.5f;
+
     // Update is called once per frame
     void Update()
     {
@@ -44,13 +50,21 @@ public class ControllerInputCheck : MonoBehaviour
 		if(RTriggerClicked.stateDown)
 		{
 			booster = true;
+
+            //진동 발생주기 변수 리셋
+            hapticDuration = 0.3f;
         }
         else if(RTriggerClicked.state)
         {
-            //오른쪽 버튼 누르는 동안 진동 발생
-            float rand = Random.Range(0.5f, 1);
-            LHaptic.Execute(0, 0.2f, 50 * rand, 30 * rand, leftController);
-            RHaptic.Execute(0, 0.2f, 50 * rand, 30 * rand, rightController);
+            print(hapticDuration);
+            float rand = Random.Range(0.5f, 1);     //랜덤 진동 크기 생성
+            hapticDuration += Time.deltaTime;       //진동실행주기 변수 갱신
+            if(hapticDuration > 0.29f)               //0.5초 지나면 1회 실행
+            {
+                hapticDuration = 0;
+                //오른쪽 버튼 누르는 동안 진동 발생
+                hapticControl.HapticOn(0.3f, rand); //햅틱컨트롤의 메서드 실행
+            }
         }
 		//트리거 뗐을 때(한번)
 		else if(RTriggerClicked.stateUp)
