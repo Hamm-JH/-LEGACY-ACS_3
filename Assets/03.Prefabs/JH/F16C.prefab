@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1437386147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1437386148}
+  m_Layer: 0
+  m_Name: CamPosTP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1437386148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437386147}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 2.5949416, z: 11.373875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1184624348098911973}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &5734875324896975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,6 +45,7 @@ MonoBehaviour:
   aviationManager: {fileID: 8547949228609312818}
   throttleParticle: {fileID: 4098498435379097354}
   afterBurnerParticle: {fileID: 5734874633022944}
+  _booster: 0
 --- !u!1 &54728774566449433
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,6 +111,7 @@ Transform:
   - {fileID: 8547949229010060086}
   - {fileID: 8547949229010060076}
   - {fileID: 8547949227799019608}
+  - {fileID: 1437386148}
   m_Father: {fileID: 8547949229010060064}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -434,7 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8547949227799019608}
   m_Layer: 0
-  m_Name: CamPos
+  m_Name: CamPosFP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,9 +568,11 @@ MonoBehaviour:
   currForce: 0
   ADCeleration: 0
   TorqueResist: 0
+  BrakeResist: 0
   controlAngle: {x: 0, y: 0, z: 0, w: 0}
   boosterValue: 0
   throttle: 0
+  brakeButton: 0
   _minimumSpeedBoundary: 0
   _normalSpeedBoundary: 0
   _maxSpeedBoundary: 0
@@ -2113,12 +2147,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
-        type: 3}
+    - target: {fileID: 1085968290, guid: d4a350b927ba1e847b6658ea234c477c, type: 3}
       propertyPath: simulationSpeed
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1085968290, guid: d4a350b927ba1e847b6658ea234c477c, type: 3}
+    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
+        type: 3}
       propertyPath: simulationSpeed
       value: 3
       objectReference: {fileID: 0}
@@ -2228,6 +2262,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: F16[CameraRig]
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921091039555971970, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: LMenuClicked.actionPath
+      value: /actions/default/in/Lt_Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921091039555971970, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: LTriggerClicked.actionPath
+      value: /actions/default/in/Lt_GrabPinch
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921091039555971970, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: LTrackpadDragged.actionPath
+      value: /actions/default/in/Lt_TrackpadPos
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921091039555971970, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: LPoseTracker.actionPath
+      value: /actions/default/in/Lt_pose
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921091039555971970, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: LHaptic.actionPath
+      value: /actions/default/out/Haptic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921091039555971970, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: RHaptic.actionPath
+      value: /actions/default/out/Haptic
       objectReference: {fileID: 0}
     - target: {fileID: 507093870659088551, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}

@@ -18,6 +18,9 @@ public class AfterBurnerControl : MonoBehaviour
     [Header("ParticleSystem_emmision_module")]
     public ParticleSystem.EmissionModule afterburnerEmissionModule;
 
+    [Header("booster value")]
+    public int _booster;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,13 +40,15 @@ public class AfterBurnerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _booster = aviationManager.booster;
+
         //애프터버너 부스터 킬때와 끌때 파티클 개수 조정
-        if(aviationManager.booster == 1)
+        if(_booster == 1)
         {
             //print("60");
             afterburnerEmissionModule.rateOverTime = 60f;
         }
-        else if(aviationManager.booster == 0)
+        else if(_booster == 0)
         {
             //print("0");
             afterburnerEmissionModule.rateOverTime = 0f;

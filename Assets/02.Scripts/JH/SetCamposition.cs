@@ -5,13 +5,26 @@ using UnityEngine.XR;
 
 public class SetCamposition : MonoBehaviour
 {
-    public Transform cam;
-    public Transform camPosition;
-	public Transform body;
+    [Header("Aviation manager")]
+    public ControllerInputCheck inputCheck;     //입력확인
+
+    [Header ("View position")]
+	public Transform FirstPersonView;           //1인칭 시점 위치
+    public Transform ThirdPersonView;           //3인칭 시점 위치
+
+    [Header ("Cam set object")]
+    public Transform camPosition;               //카메라 세팅 위치 받아올 변수
+    public Transform cam;                       //카메라
+
+    [Header("Switch values")]
+    public bool switchClicked;                  //컨트롤러값 받아오는 변수
+    public int camSwitch;                       //캠위치 변경하는 변수 0은 1인칭, 1은 3인칭
 
 	void Start()
 	{
-		camPosition.position = body.position;
+        camSwitch = 0;      //캠위치 1인칭
+
+		camPosition.position = FirstPersonView.position;
 		cam.position = camPosition.position;
 		UnityEngine.XR.InputTracking.disablePositionalTracking = true;
 	}
@@ -19,7 +32,26 @@ public class SetCamposition : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
-		camPosition.position = body.position;
+        switchClicked = inputCheck.LMenuClicked.stateDown;
+        if(switchClicked == true)
+        {
+            switchClicked = false;
+            camSwitch = (camSwitch + 1) % 2;
+        }
+
+        //캠 위치 변경할 변수 위치 변경
+        switch(camSwitch)
+        {
+            case 0:     //1인칭
+		        camPosition.position = FirstPersonView.position;
+                break;
+
+            case 1:     //3인칭
+                camPosition.position = ThirdPersonView.position;
+                break;
+        }
+
+        //캠 위치 변경
 		cam.position = camPosition.position;
 	}
     
