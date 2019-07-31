@@ -60,20 +60,20 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _FresnelScale: 0.3897143
-    - _GerstnerIntensity: 1
+    - _FresnelScale: 2.3
+    - _GerstnerIntensity: 0.82
     - _HeightDisplacement: 2.3370318
     - _NormalsDisplacement: 72.72728
     - _Shininess: 349.13794
     m_Colors:
     - _AnimationDirection: {r: 2, g: 1, b: -1, a: 1}
     - _AnimationTiling: {r: 0.4, g: 0.39099997, b: 0.56, a: 0.7}
-    - _BaseColor: {r: 0.17292082, g: 0.428982, b: 0.5471698, a: 1}
+    - _BaseColor: {r: 0.17279908, g: 0.42885354, b: 0.5471698, a: 1}
     - _BumpDirection: {r: 1, g: 30, b: 20, a: -20}
-    - _BumpTiling: {r: 0.04, g: 0.04, b: 0.04, a: 0.08}
+    - _BumpTiling: {r: 0.1, g: 0.1, b: 0.1, a: 0.1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DepthColor: {r: 0.29811764, g: 0.36611718, b: 0.39552242, a: 0.34509805}
-    - _DistortParams: {r: 1.0285715, g: 0.20187221, b: 2.766625, a: -0.41714284}
+    - _DistortParams: {r: -1.29, g: 0.156, b: 0.86, a: -1.77}
     - _Foam: {r: 0.3275862, g: 0.7471264, b: 0, a: 0}
     - _GAmplitude: {r: 0.3, g: 0.2, b: 0.25, a: 0.25}
     - _GDirectionAB: {r: 0.85, g: 0.3, b: 0.25, a: 0.25}
