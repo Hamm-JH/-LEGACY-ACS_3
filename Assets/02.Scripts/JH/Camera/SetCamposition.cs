@@ -6,6 +6,7 @@ using UnityEngine.XR;
 public class SetCamposition : MonoBehaviour
 {
     [Header("Aviation manager")]
+    public AviationManager aviationManager;     //비행 관리자
     public ControllerInputCheck inputCheck;     //입력확인
 
     [Header ("View position")]
@@ -19,6 +20,10 @@ public class SetCamposition : MonoBehaviour
     [Header("Switch values")]
     public bool switchClicked;                  //컨트롤러값 받아오는 변수
     public int camSwitch;                       //캠위치 변경하는 변수 0은 1인칭, 1은 3인칭
+
+    [Header("현재 카메라의 회전값을 받아오는 변수들")]
+    public float camPitch;                      //카메라 pitch값
+    public float camYaw;                        //카메라 yaw값
 
 	void Start()
 	{
@@ -38,6 +43,17 @@ public class SetCamposition : MonoBehaviour
             switchClicked = false;
             camSwitch = (camSwitch + 1) % 2;
         }
+        
+        if(transform.localRotation.x > -0.7f && transform.localRotation.x < 0.8f)
+        {
+            camPitch = transform.localRotation.x / 10;
+        }
+        if (transform.localRotation.y > -0.8f && transform.localRotation.y < 0.8f)
+        {
+            camYaw = transform.localRotation.y / 10;
+        }
+
+        //------------------------------------------
 
         //캠 위치 변경할 변수 위치 변경
         switch(camSwitch)
@@ -52,7 +68,7 @@ public class SetCamposition : MonoBehaviour
         }
 
         //캠 위치 변경
-		cam.position = camPosition.position;
+		cam.position = camPosition.position + new Vector3(camPitch, camYaw, 0);
 	}
     
 }
