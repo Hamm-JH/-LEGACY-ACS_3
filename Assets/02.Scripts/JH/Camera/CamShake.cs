@@ -1,13 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class CamShake : MonoBehaviour
 {
-    //카메라 흔들기
-    public float ShakeAmount;
-    float ShakeTime;
+    public Camera cam;      //카메라 위치
+
+    public float ShakeAmount;   //카메라 흔들기
+    float ShakeTime;            //흔드는 시간
     Vector3 initialPosition;
+
+    public SteamVR_Camera steamCam;
+
 
     public void VibrateForTime(float time)
     {
@@ -18,7 +23,7 @@ public class CamShake : MonoBehaviour
     void Start()
     {
         ShakeTime = 5f;
-        initialPosition = new Vector3(0, 0, -5f);
+        initialPosition = new Vector3(0, 0, -10f);
         UnityEngine.XR.InputTracking.disablePositionalTracking = true;
     }
 
