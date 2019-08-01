@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 public class FrontGlassHUD : MonoBehaviour
 {
-    public Transform camera;
+    public Transform cam;
 
-    public Transform horizontalLine;
+    public RawImage horizontalLine;
     public Transform VerticalLine;
 
     public float pitch;
+    public float yaw;
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +21,21 @@ public class FrontGlassHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(camera.localRotation.x > -0.7f && camera.localRotation.x < 0.7f)
+        //수직 각도 변경값 받기
+        if(cam.localRotation.x > -0.7f && cam.localRotation.x < 0.7f)
         {
-            pitch = camera.localRotation.x / 7 * 10;
+            pitch = cam.localRotation.x / 7 * 10;
         }
-        print(pitch * 900);
-        VerticalLine.localPosition = new Vector3(0, pitch * 900, 0);
+        //print(pitch * 800);
+
+        //수직 각도 변경
+        VerticalLine.localPosition = new Vector3(0, pitch * 800, 0);
+
+        //print(cam.localRotation.eulerAngles.y);
+
+        yaw = cam.localRotation.eulerAngles.y / 360;
+
+        horizontalLine.uvRect = new Rect(yaw, 0, 1, 1);
+        //print(yaw);
     }
 }
