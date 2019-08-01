@@ -33,8 +33,10 @@ public class FrontGlassHUD : MonoBehaviour
 
         //print(cam.localRotation.eulerAngles.y);
 
+        //수평 각도 변경값 받기
         yaw = cam.localRotation.eulerAngles.y / 360;
 
+        //수평 각도 변경
         horizontalLine.uvRect = new Rect(yaw, 0, 1, 1);
         //print(yaw);
     }
