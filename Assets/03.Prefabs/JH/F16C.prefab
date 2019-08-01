@@ -2316,7 +2316,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5734875324896975, guid: f48ccce394d0913459e5ab035108ba1a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f48ccce394d0913459e5ab035108ba1a, type: 3}
 --- !u!1 &3965024637626134081 stripped
 GameObject:
@@ -2354,11 +2355,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: F16[CameraRig]
       objectReference: {fileID: 0}
-    - target: {fileID: 565069428949923066, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: aviationManager
-      value: 
-      objectReference: {fileID: 8547949228609312818}
     - target: {fileID: 507093870659088551, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2414,6 +2410,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 565069428949923066, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: aviationManager
+      value: 
+      objectReference: {fileID: 8547949228609312818}
+    - target: {fileID: 8702788996851834442, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: origin
+      value: 
+      objectReference: {fileID: 8547949227799019608}
     - target: {fileID: 1301217137474299588, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: aviationManager
@@ -2429,11 +2435,6 @@ PrefabInstance:
       propertyPath: ThirdPersonView
       value: 
       objectReference: {fileID: 1437386148}
-    - target: {fileID: 8702788996851834442, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: origin
-      value: 
-      objectReference: {fileID: 8547949227799019608}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f5e32978d281646926e80d6ee0bbd9, type: 3}
 --- !u!114 &6604774435669504899 stripped
