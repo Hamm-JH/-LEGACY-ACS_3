@@ -21,6 +21,7 @@ public class ResonanceAudioDemoManager : MonoBehaviour {
 
   /// Cube controller.
   public ResonanceAudioDemoCubeController cube;
+ 
 
   void Start() {
     Screen.sleepTimeout = SleepTimeout.NeverSleep;
