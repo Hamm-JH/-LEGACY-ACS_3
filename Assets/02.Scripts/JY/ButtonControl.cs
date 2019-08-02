@@ -9,12 +9,15 @@ public class ButtonControl : MonoBehaviour
     private AudioSource sound;
 
     private bool soundOn = false;
+    
 
     void Start()
     {
         startPos = transform.position;
        
         sound = GetComponent<AudioSource>();
+        sound.Stop();
+        
     }
 
     void Update()
