@@ -29,7 +29,7 @@ public class SetCamposition : MonoBehaviour
 	{
         camSwitch = 0;      //캠위치 1인칭
 
-		camPosition.position = FirstPersonView.position;
+        camPosition.position = FirstPersonView.position;
 		cam.position = camPosition.position;
 		UnityEngine.XR.InputTracking.disablePositionalTracking = true;
 	}
@@ -68,7 +68,7 @@ public class SetCamposition : MonoBehaviour
         }
 
         //캠 위치 변경
-		cam.position = camPosition.position + new Vector3(camPitch, camYaw, 0);
+        cam.position = camPosition.position;// + new Vector3(camPitch, camYaw, 0);
 	}
     
 }

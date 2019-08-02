@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 507093870664782621}
   - component: {fileID: 3921091039555971970}
   - component: {fileID: 565069428949923066}
+  - component: {fileID: 1179192917100123507}
   m_Layer: 0
   m_Name: F16[CameraRig]
   m_TagString: Untagged
@@ -247,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de52caba30aa0a46bce80bd62d063df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aviationManager: {fileID: 8547949228609312818, guid: da4aa7b03f0ba58459336245d5521146,
+  aviationManager: {fileID: 9199027334123837869, guid: fd0587f31fd3b7944b8bb2d97073f03a,
     type: 3}
   rightHand: 2
   rPos:
@@ -255,6 +256,28 @@ MonoBehaviour:
     needsReinit: 0
   xPort: 0
   wPort: 0
+--- !u!114 &1179192917100123507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507093870659363167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a7ca2937f9aab488ed5cf3fd1a460f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aviationManager: {fileID: 0}
+  inputCheck: {fileID: 0}
+  FirstPersonView: {fileID: 0}
+  ThirdPersonView: {fileID: 0}
+  camPosition: {fileID: 0}
+  cam: {fileID: 0}
+  switchClicked: 0
+  camSwitch: 0
+  camPitch: 0
+  camYaw: 0
 --- !u!1 &507093870659385353
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +364,9 @@ GameObject:
   - component: {fileID: 1297989331970003675}
   - component: {fileID: 1317965340109126273}
   - component: {fileID: 1301217137474299588}
-  - component: {fileID: 2809978792138936604}
+  - component: {fileID: 7263097604443558678}
+  - component: {fileID: 7263097604443558679}
+  - component: {fileID: 7263097604443558695}
   m_Layer: 0
   m_Name: Camera (eye)
   m_TagString: Untagged
@@ -356,13 +381,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301217137474299589}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.081941456, y: -7.3327996e-11, z: -3.9948482e-11, w: 0.99663717}
+  m_LocalPosition: {x: 0, y: 0.68, z: -0.022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 507093870659088551}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.400001, y: 0, z: 0}
 --- !u!20 &1317965340109126273
 Camera:
   m_ObjectHideFlags: 0
@@ -418,18 +443,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a7ca2937f9aab488ed5cf3fd1a460f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aviationManager: {fileID: 0}
-  inputCheck: {fileID: 3921091039555971970}
-  FirstPersonView: {fileID: 8547949227799019608, guid: da4aa7b03f0ba58459336245d5521146,
+  aviationManager: {fileID: 9199027334123837869, guid: fd0587f31fd3b7944b8bb2d97073f03a,
     type: 3}
-  ThirdPersonView: {fileID: 1437386148, guid: da4aa7b03f0ba58459336245d5521146, type: 3}
+  inputCheck: {fileID: 3921091039555971970}
+  FirstPersonView: {fileID: 9199027334396723655, guid: fd0587f31fd3b7944b8bb2d97073f03a,
+    type: 3}
+  ThirdPersonView: {fileID: 651306809658082363, guid: fd0587f31fd3b7944b8bb2d97073f03a,
+    type: 3}
   camPosition: {fileID: 507093870659088551}
   cam: {fileID: 1297989331970003675}
   switchClicked: 0
   camSwitch: 0
   camPitch: 0
   camYaw: 0
---- !u!114 &2809978792138936604
+--- !u!81 &7263097604443558678
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301217137474299589}
+  m_Enabled: 1
+--- !u!114 &7263097604443558679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301217137474299589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113e4aa2cd3db44d1ac0cb7e9794964b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGainDb: 0
+  occlusionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stereoSpeakerModeEnabled: 0
+  recorderSeamless: 0
+  recorderSourceTag: Untagged
+  recorderFoldout: 0
+--- !u!114 &7263097604443558695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -587,7 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  origin: {fileID: 8547949227799019608, guid: da4aa7b03f0ba58459336245d5521146, type: 3}
+  origin: {fileID: 9199027334396723655, guid: fd0587f31fd3b7944b8bb2d97073f03a, type: 3}
 --- !u!1 &8702788997435467273
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,4 +695,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a86c1078ce4314b9c4224560e031b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vrcam: {fileID: 2809978792138936604}
+  vrcam: {fileID: 4429226258721308042, guid: 91cd1fe8f931f174c8f8e8aca17d2425, type: 3}
