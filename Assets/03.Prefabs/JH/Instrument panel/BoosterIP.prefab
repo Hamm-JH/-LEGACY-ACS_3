@@ -289,7 +289,7 @@ MonoBehaviour:
   savedUp: {x: 0, y: 1, z: 0}
   savedRectSize: {x: 46.6, y: 30}
   savedColor: {r: 0, g: 1, b: 0.08628178, a: 1}
-  savedTextUV0: {x: 0.08203125, y: 0.21484375}
+  savedTextUV0: {x: 0, y: 0.0859375}
   savedFill: 0
 --- !u!1 &4443010842620177946
 GameObject:
