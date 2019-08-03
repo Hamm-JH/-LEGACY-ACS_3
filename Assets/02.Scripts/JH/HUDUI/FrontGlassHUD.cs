@@ -22,29 +22,16 @@ public class FrontGlassHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //수직 각도 변경값 받기
-        //if(fighterBody.rotation.x > -0.7f && fighterBody.rotation.x < 0.7f)
-        //{
-        //    pitch = -fighterBody.rotation.x / 7 * 10;
-        //}
-
-        //print(pitch * 800);
-
         pitch = fighterBody.eulerAngles.x;
         pitch = ((360 * (int)(pitch / 260)) - pitch) / 9 * 8;
 
         //수직 각도 변경
         VerticalLine.localPosition = new Vector3(66, pitch * 10, 0);
 
-        //print(VerticalLine.localPosition.y);
-
-        //print(fighterBody.rotation.eulerAngles.y);
-
         //수평 각도 변경값 받기
         yaw = fighterBody.rotation.eulerAngles.y / 360;
 
         //수평 각도 변경
         horizontalLine.uvRect = new Rect(yaw, 0, 1, 1);
-        //print(yaw);
     }
 }
