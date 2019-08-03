@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1528627469192391785}
   - component: {fileID: 1528627469192391784}
   - component: {fileID: 1528627469192391787}
+  - component: {fileID: 1516222753}
   m_Layer: 0
   m_Name: StatusIP
   m_TagString: Untagged
@@ -26,9 +27,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528627469192391829}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 4.08}
-  m_LocalScale: {x: 0.0006864, y: 0.00077899545, z: 0.0006864001}
+  m_LocalScale: {x: 0.00018606248, y: 0.00021116232, z: 0.0001860625}
   m_Children:
   - {fileID: 1528627469536637654}
   m_Father: {fileID: 0}
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528627469192391829}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -89,7 +90,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528627469192391829}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -99,6 +100,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1516222753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528627469192391829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed463505a0c746b48a5da4d8fe9b165c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aviationManager: {fileID: 0}
+  landingGearStatus: {fileID: 1528627470718248591}
+  afterBurnerStatus: {fileID: 1528627470397382981}
 --- !u!1 &1528627469469444369
 GameObject:
   m_ObjectHideFlags: 0
