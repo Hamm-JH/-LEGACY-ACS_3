@@ -4745,7 +4745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &612100749903333095
 Transform:
   m_ObjectHideFlags: 0
@@ -4778,7 +4778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 65
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3968453233701808493
 Transform:
   m_ObjectHideFlags: 0
@@ -5135,7 +5135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 65
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3968453233701719559
 Transform:
   m_ObjectHideFlags: 0
@@ -5890,7 +5890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3968453233701698791
 Transform:
   m_ObjectHideFlags: 0
@@ -5913,6 +5913,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3968453233701811979}
     m_Modifications:
+    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
+        type: 3}
+      propertyPath: useUnscaledTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 4104069307473056814, guid: d4a350b927ba1e847b6658ea234c477c,
         type: 3}
       propertyPath: m_Name
@@ -5988,26 +6008,6 @@ PrefabInstance:
     - target: {fileID: 1085968288, guid: d4a350b927ba1e847b6658ea234c477c, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
-        type: 3}
-      propertyPath: simulationSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
-        type: 3}
-      propertyPath: useUnscaledTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
-        type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4104069307458932040, guid: d4a350b927ba1e847b6658ea234c477c,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 443166920980694691, guid: d4a350b927ba1e847b6658ea234c477c,
         type: 3}
