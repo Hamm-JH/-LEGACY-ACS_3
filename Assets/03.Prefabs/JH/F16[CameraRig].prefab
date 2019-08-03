@@ -28,7 +28,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1356532368937942998}
+  - {fileID: 8033928009846202722}
   m_Father: {fileID: 507093870659088551}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 507093870664782621}
   - component: {fileID: 3921091039555971970}
   - component: {fileID: 565069428949923066}
-  - component: {fileID: 1179192917100123507}
   m_Layer: 0
   m_Name: F16[CameraRig]
   m_TagString: Untagged
@@ -104,7 +103,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507093870659363167}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -248,36 +247,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de52caba30aa0a46bce80bd62d063df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aviationManager: {fileID: 9199027334123837869, guid: fd0587f31fd3b7944b8bb2d97073f03a,
-    type: 3}
+  aviationManager: {fileID: 0}
   rightHand: 2
   rPos:
     actionPath: /actions/default/in/Rt_pose
     needsReinit: 0
   xPort: 0
   wPort: 0
---- !u!114 &1179192917100123507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507093870659363167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a7ca2937f9aab488ed5cf3fd1a460f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aviationManager: {fileID: 0}
-  inputCheck: {fileID: 0}
-  FirstPersonView: {fileID: 0}
-  ThirdPersonView: {fileID: 0}
-  camPosition: {fileID: 0}
-  cam: {fileID: 0}
-  switchClicked: 0
-  camSwitch: 0
-  camPitch: 0
-  camYaw: 0
 --- !u!1 &507093870659385353
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +282,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3941928476180822894}
+  - {fileID: 1356532368937942998}
   m_Father: {fileID: 507093870659088551}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -364,8 +340,6 @@ GameObject:
   - component: {fileID: 1297989331970003675}
   - component: {fileID: 1317965340109126273}
   - component: {fileID: 1301217137474299588}
-  - component: {fileID: 7263097604443558678}
-  - component: {fileID: 7263097604443558679}
   - component: {fileID: 7263097604443558695}
   m_Layer: 0
   m_Name: Camera (eye)
@@ -443,47 +417,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a7ca2937f9aab488ed5cf3fd1a460f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aviationManager: {fileID: 9199027334123837869, guid: fd0587f31fd3b7944b8bb2d97073f03a,
-    type: 3}
+  aviationManager: {fileID: 0}
   inputCheck: {fileID: 3921091039555971970}
-  FirstPersonView: {fileID: 9199027334396723655, guid: fd0587f31fd3b7944b8bb2d97073f03a,
-    type: 3}
-  ThirdPersonView: {fileID: 651306809658082363, guid: fd0587f31fd3b7944b8bb2d97073f03a,
-    type: 3}
+  FirstPersonView: {fileID: 0}
+  ThirdPersonView: {fileID: 0}
   camPosition: {fileID: 507093870659088551}
   cam: {fileID: 1297989331970003675}
   switchClicked: 0
   camSwitch: 0
   camPitch: 0
   camYaw: 0
---- !u!81 &7263097604443558678
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301217137474299589}
-  m_Enabled: 1
---- !u!114 &7263097604443558679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1301217137474299589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113e4aa2cd3db44d1ac0cb7e9794964b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  globalGainDb: 0
-  occlusionMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  stereoSpeakerModeEnabled: 0
-  recorderSeamless: 0
-  recorderSourceTag: Untagged
-  recorderFoldout: 0
 --- !u!114 &7263097604443558695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,7 +470,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 507093870659106953}
+  m_Father: {fileID: 507093870659034197}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1356532368931030216
@@ -548,7 +491,7 @@ MonoBehaviour:
   verbose: 0
   createComponents: 1
   updateDynamically: 1
---- !u!1 &3941928476181038992
+--- !u!1 &8033928009846365596
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -556,8 +499,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3941928476180822894}
-  - component: {fileID: 3941928476174991472}
+  - component: {fileID: 8033928009846202722}
+  - component: {fileID: 8033928009836190332}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -565,27 +508,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3941928476180822894
+--- !u!4 &8033928009846202722
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3941928476181038992}
+  m_GameObject: {fileID: 8033928009846365596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 507093870659034197}
+  m_Father: {fileID: 507093870659106953}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3941928476174991472
+--- !u!114 &8033928009836190332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3941928476181038992}
+  m_GameObject: {fileID: 8033928009846365596}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5890e3cad70bea64d91aef9145ba3454, type: 3}
@@ -642,7 +585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
-  origin: {fileID: 9199027334396723655, guid: fd0587f31fd3b7944b8bb2d97073f03a, type: 3}
+  origin: {fileID: 0}
 --- !u!1 &8702788997435467273
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +597,7 @@ GameObject:
   - component: {fileID: 8702788997435467272}
   - component: {fileID: 8702788997435467286}
   - component: {fileID: 8702788997435467287}
+  - component: {fileID: 1568204736491194866}
   m_Layer: 0
   m_Name: Camera (ears)
   m_TagString: Untagged
@@ -695,4 +639,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a86c1078ce4314b9c4224560e031b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vrcam: {fileID: 4429226258721308042, guid: 91cd1fe8f931f174c8f8e8aca17d2425, type: 3}
+  vrcam: {fileID: 7263097604443558695}
+--- !u!114 &1568204736491194866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8702788997435467273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113e4aa2cd3db44d1ac0cb7e9794964b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGainDb: 0
+  occlusionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stereoSpeakerModeEnabled: 0
+  recorderSeamless: 0
+  recorderSourceTag: Untagged
+  recorderFoldout: 0

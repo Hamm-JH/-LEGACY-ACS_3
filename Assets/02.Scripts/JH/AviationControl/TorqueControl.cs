@@ -46,6 +46,8 @@ public class TorqueControl : MonoBehaviour
 		controlAngle = aviationManager.controlAngle;
 		currForce = thrustControl.currForce;
 
+        //print(controlAngle.x);
+
 		switch(status)
 		{
 			case AviationManager.AviationStatus.BELOW_MINIMUM_SPEED:

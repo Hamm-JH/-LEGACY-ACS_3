@@ -26,6 +26,6 @@ public class AircraftPitchIndicator : MonoBehaviour
 
 
         pitchIndicator.localPosition = new Vector3(0, -11.5f + pitch * 89.8f * 3, 0);
-        print(pitchIndicator.localPosition.y);
+        //print(pitchIndicator.localPosition.y);
     }
 }

@@ -83,7 +83,8 @@ public class AviationManager : MonoBehaviour
         }
         //print(yaw);
 		axis	= _controllerAngle.w;
-		controlAngle = new Quaternion(pitch, yaw, roll, axis);
+
+        controlAngle = new Quaternion(pitch, yaw, roll, axis);
 
 		booster = inputCheck.booster ? 1 : 0;  		//트리거 눌렀으면 1, 안 눌렀으면 0
 		throttle = inputCheck.throttle;             //트랙패드 입력갱신

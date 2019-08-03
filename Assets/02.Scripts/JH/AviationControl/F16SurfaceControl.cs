@@ -11,6 +11,8 @@ public class F16SurfaceControl : MonoBehaviour
     private float yaw;
     private float roll;
 
+    public Rigidbody fighterBody;
+
     [Header("turning_object")]
     public Transform VoletL;
     public Transform VoletR;
@@ -45,6 +47,7 @@ public class F16SurfaceControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         Epsilon = Mathf.Epsilon + 1 - 1;        //근사값 0으로 제대로 맞춰주기 위해 1 더하고 1 뺌
         //PitchRollCheck = 0;                   //pitch값과 roll값을 확인해서 보간줄 조건확인위한 변수
 
@@ -57,6 +60,10 @@ public class F16SurfaceControl : MonoBehaviour
         //브레이크 올리고 내리는 타이머
         UpTime = 0;
         DownTime = 0;
+
+        fighterBody.centerOfMass = new Vector3(0, fighterBody.centerOfMass.y, -1f);
+        //print(fighterBody.centerOfMass.x);
+        //fighterBody.centerOfMass = new Vector3();
     }
 
     // Update is called once per frame
