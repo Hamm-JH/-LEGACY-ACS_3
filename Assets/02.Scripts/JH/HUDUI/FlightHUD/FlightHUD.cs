@@ -21,7 +21,7 @@ public class FlightHUD : MonoBehaviour
     public Text speedText;          //속도계
     public Text throttleText;       //출력계
 
-    public Transform HUDInnerWing;  //비행 각도 출력
+    public Transform HUDInnerRing;  //비행 각도 출력
     public Transform extendWing;    //비행각도계
 
     // Start is called before the first frame update
@@ -43,11 +43,14 @@ public class FlightHUD : MonoBehaviour
         speedText.text = aviationManager.thrustControl.currForce.ToString("N1");
         throttleText.text = (aviationManager.throttle * 40).ToString("N2");
 
+        //비행체 회전각도 보여주기
         extendWing.localRotation = Quaternion.Euler(new Vector3(0, 0, 360 - fighterBody.rotation.eulerAngles.z));
-        //날개 인터페이스 확장 360 ~ 0 시계방향
-        //print(extendWing.localRotation.eulerAngles.z);
 
-        //회전값 0 ~ 360 시계방향
-        //print(360 - fighterBody.rotation.eulerAngles.z);
+        HUDInnerRing.localPosition = new Vector3(-aviationManager.roll * 50
+                                                , -aviationManager.pitch * 50
+                                                , 0);
+        //pitch -1 ~ 1
+        //print(aviationManager.pitch);
+        //print(HUDInnerRing.localPosition);
     }
 }

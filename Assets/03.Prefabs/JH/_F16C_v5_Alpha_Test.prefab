@@ -3655,12 +3655,12 @@ PrefabInstance:
     - target: {fileID: 4803338625654168145, guid: 81eaf040fc6ba3f4da55ece4ea45d4d1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9937835
+      value: -0.07464377
       objectReference: {fileID: 0}
     - target: {fileID: 4803338625654168145, guid: 81eaf040fc6ba3f4da55ece4ea45d4d1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.11133034
+      value: 0.99721026
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81eaf040fc6ba3f4da55ece4ea45d4d1, type: 3}
