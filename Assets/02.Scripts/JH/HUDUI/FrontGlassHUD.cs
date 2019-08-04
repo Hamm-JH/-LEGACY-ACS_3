@@ -9,6 +9,7 @@ public class FrontGlassHUD : MonoBehaviour
 
     public RawImage horizontalLine;
     public Transform VerticalLine;
+    public Transform hor_Line;
 
     public float pitch;
     public float yaw;
@@ -33,5 +34,7 @@ public class FrontGlassHUD : MonoBehaviour
 
         //수평 각도 변경
         horizontalLine.uvRect = new Rect(yaw, 0, 1, 1);
+
+        hor_Line.localRotation = Quaternion.Euler(new Vector3(0, 0, fighterBody.rotation.eulerAngles.z));
     }
 }

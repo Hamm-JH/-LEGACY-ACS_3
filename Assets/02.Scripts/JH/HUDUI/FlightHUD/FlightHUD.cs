@@ -46,11 +46,9 @@ public class FlightHUD : MonoBehaviour
         //비행체 회전각도 보여주기
         extendWing.localRotation = Quaternion.Euler(new Vector3(0, 0, 360 - fighterBody.rotation.eulerAngles.z));
 
+        //비행체 진행방향 보여주기
         HUDInnerRing.localPosition = new Vector3(-aviationManager.roll * 50
                                                 , -aviationManager.pitch * 50
                                                 , 0);
-        //pitch -1 ~ 1
-        //print(aviationManager.pitch);
-        //print(HUDInnerRing.localPosition);
     }
 }

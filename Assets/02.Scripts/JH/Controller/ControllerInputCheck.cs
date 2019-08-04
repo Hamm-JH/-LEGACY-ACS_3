@@ -13,6 +13,7 @@ public class ControllerInputCheck : MonoBehaviour
     public SteamVR_Action_Boolean LMenuClicked;         //메뉴 버튼 클릭 확인
     public SteamVR_Action_Boolean LTriggerClicked;      //트리거 클릭 확인
     public SteamVR_Action_Vector2 LTrackpadDragged;     //트랙패드 드래깅 확인
+    public SteamVR_Action_Boolean LGrabGrip;            //왼쪽 그랩 버튼 확인
     public SteamVR_Action_Pose LPoseTracker;            //위치값 받음
     public SteamVR_Action_Vibration LHaptic;            //진동값 받음
 
@@ -21,6 +22,7 @@ public class ControllerInputCheck : MonoBehaviour
     public SteamVR_Action_Boolean RMenuClicked;         //메뉴 버튼 클릭 확인
 	public SteamVR_Action_Boolean RTriggerClicked;      //트리거 클릭 확인
 	public SteamVR_Action_Vector2 RTrackpadDragged;     //트랙패드 드래깅 확인
+    public SteamVR_Action_Boolean RGrabGrip;            //오른쪽 그랩 버튼 확인
 	public SteamVR_Action_Pose RPoseTracker;            //위치값 받음
     public SteamVR_Action_Vibration RHaptic;            //진동값 받음
 
@@ -89,7 +91,8 @@ public class ControllerInputCheck : MonoBehaviour
 
         //------------------------------------왼쪽 컨트롤러 갱신 영역 시작
 
-        //왼쪽 컨트롤러 메뉴 버튼은 카메라 위치 변경에 사용됨
+        //왼쪽 컨트롤러 메뉴 버튼은 카메라 위치 변경에 사용됨 (SetCamposition.cs)
+        //왼쪽 컨트롤러 그랩 버튼은 HUD 변경에 사용됨. (F16HUDManager.cs)
 
         //------------------------------------왼쪽 컨트롤러 갱신 영역 끝
     }

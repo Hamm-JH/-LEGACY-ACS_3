@@ -24,8 +24,7 @@ public class AircraftPitchIndicator : MonoBehaviour
             pitch = (aviationManager._controllerAngle.x + 0.4f) / 4 * 10;
         }
 
-
+        //비행체 회전각도 보여주기
         pitchIndicator.localPosition = new Vector3(0, -11.5f + pitch * 89.8f * 3, 0);
-        //print(pitchIndicator.localPosition.y);
     }
 }
