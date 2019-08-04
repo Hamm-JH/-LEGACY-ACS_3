@@ -3652,6 +3652,16 @@ PrefabInstance:
       propertyPath: raderLine
       value: 
       objectReference: {fileID: 3130861737003851055}
+    - target: {fileID: 4803338625654168145, guid: 81eaf040fc6ba3f4da55ece4ea45d4d1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.955296
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803338625654168145, guid: 81eaf040fc6ba3f4da55ece4ea45d4d1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.2956512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81eaf040fc6ba3f4da55ece4ea45d4d1, type: 3}
 --- !u!224 &1200354886154875624 stripped

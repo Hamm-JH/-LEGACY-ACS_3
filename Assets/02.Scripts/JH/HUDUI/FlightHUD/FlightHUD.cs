@@ -5,13 +5,24 @@ using UnityEngine.UI;
 
 public class FlightHUD : MonoBehaviour
 {
+    [Header("flight status import")]
+    public AviationManager aviationManager;
     public Transform fighterBody;
     public Transform cam;       //HeadingMeter 바꿀 카메라각도
 
+    [Header ("heading meter")]
     public RawImage headingMeter;   //보는 방향 알려주는 눈금
 
+    [Header ("altitude meter")]
     public Transform altiMeter;     //고도계 확인용
     public Text altiMeterText;      //고도 확인 텍스트
+
+    [Header("flight status")]
+    public Text speedText;          //속도계
+    public Text throttleText;       //출력계
+
+    public Transform HUDInnerWing;  //비행 각도 출력
+    public Transform extendWing;    //비행각도계
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +39,14 @@ public class FlightHUD : MonoBehaviour
         altiMeter.localPosition = new Vector3(-52.95f, -1.5f - 91.42f * fighterBody.position.y / 500, 0);
 
         altiMeterText.text = fighterBody.position.y.ToString("N1");
+
+        speedText.text = aviationManager.thrustControl.currForce.ToString("N1");
+        throttleText.text = (aviationManager.throttle * 40).ToString("N2");
+
+        //날개 인터페이스 확장 360 ~ 0 시계방향
+        //print(extendWing.localRotation.eulerAngles.z);
+
+        //회전값 0 ~ 360 시계방향
+        //print(fighterBody.rotation.eulerAngles.z);
     }
 }
