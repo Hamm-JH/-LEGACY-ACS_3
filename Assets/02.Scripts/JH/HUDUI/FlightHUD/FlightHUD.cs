@@ -43,10 +43,11 @@ public class FlightHUD : MonoBehaviour
         speedText.text = aviationManager.thrustControl.currForce.ToString("N1");
         throttleText.text = (aviationManager.throttle * 40).ToString("N2");
 
+        extendWing.localRotation = Quaternion.Euler(new Vector3(0, 0, 360 - fighterBody.rotation.eulerAngles.z));
         //날개 인터페이스 확장 360 ~ 0 시계방향
         //print(extendWing.localRotation.eulerAngles.z);
 
         //회전값 0 ~ 360 시계방향
-        //print(fighterBody.rotation.eulerAngles.z);
+        //print(360 - fighterBody.rotation.eulerAngles.z);
     }
 }
