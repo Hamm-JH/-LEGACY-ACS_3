@@ -99,6 +99,8 @@ public class Sym4DManager : MonoBehaviour
         switch(aviationManager.status)
         {
             case AviationManager.AviationStatus.BELOW_MINIMUM_SPEED:
+                pitch = pitch / 10;
+                roll = roll / 10;
                 _currForce = 30 * aviationManager.thrustControl.currForce / aviationManager.minimumSpeedBoundary;
                 break;
 

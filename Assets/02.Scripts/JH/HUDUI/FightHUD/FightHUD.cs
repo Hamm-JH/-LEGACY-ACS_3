@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class FightHUD : MonoBehaviour
 {
+    [Header("fight status import")]
+    public ArmController armController;
+
     [Header("flight status import")]
     public AviationManager aviationManager;
     public Transform fighterBody;
@@ -17,6 +20,9 @@ public class FightHUD : MonoBehaviour
     public Text speedText;
     public Text throttleText;
     public Transform extendWing;
+
+    [Header("fight status")]
+    public Text vulkanStat;
 
     // Start is called before the first frame update
     void Start()
@@ -34,5 +40,7 @@ public class FightHUD : MonoBehaviour
 
         //비행체 회전각도 보여주기
         extendWing.localRotation = Quaternion.Euler(new Vector3(0, 0, 360 - fighterBody.rotation.eulerAngles.z));
+
+        vulkanStat.text = armController.Vulkans + " ";
     }
 }
