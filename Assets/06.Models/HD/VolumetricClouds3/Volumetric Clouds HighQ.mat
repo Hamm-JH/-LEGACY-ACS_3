@@ -75,9 +75,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.56, g: 0.56, b: 0.56, a: 1}
     - _CloudSpherePosition: {r: 0, g: 0, b: 0, a: 0}
-    - _CloudTransform: {r: 150, g: 20, b: 0, a: 0}
+    - _CloudTransform: {r: 800, g: 30, b: 0, a: 0}
     - _CoverageChannel: {r: 1, g: 0, b: 0, a: 0}
-    - _Shading: {r: 0, g: 0, b: 0, a: 1}
+    - _Shading: {r: 0.31132078, g: 0.30397832, b: 0.30397832, a: 0.15294118}
     - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
     - _SkyLightAttenuation: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _WindDirection: {r: 0, g: 0, b: 1, a: 0}

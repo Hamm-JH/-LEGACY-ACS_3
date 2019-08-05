@@ -9,11 +9,11 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Cloud
   m_Shader: {fileID: 4800000, guid: 6dbb1fc55cba3964684746532b78b82a, type: 3}
-  m_ShaderKeywords: Y_AXIS _COMPLEXLIGHTING_MODE _HQPOINTLIGHT _NEW_SHADING _NORMALMAP
+  m_ShaderKeywords: Y_AXIS _ _COMPLEXLIGHTING_MODE _HQPOINTLIGHT _NEW_SHADING _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2501
+  m_CustomRenderQueue: 2522
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -69,11 +69,11 @@ Material:
     - _BlendWithShadowmap: 0
     - _BumpScale: 1
     - _CloudBaseFlatness: 0.1
-    - _CloudDensity: 3
+    - _CloudDensity: 5
     - _CloudFlatness: 1
     - _CloudLocalScale: 1
     - _ComplexLightingMode: 1
-    - _Coverage: 0.2
+    - _Coverage: 0
     - _CoverageHigh: 1
     - _CoverageLow: -1
     - _CoverageMapOn: 0
@@ -81,34 +81,34 @@ Material:
     - _DetailNormalMapScale: 1
     - _DirectContribution: 1
     - _DistBlendPost: 0
-    - _DistanceBlend: 1
-    - _DrawDistance: 5000
+    - _DistanceBlend: 0
+    - _DrawDistance: 10000
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HQPointLight: 1
     - _IndirectContribution: 1
-    - _IndirectOcclusion: 5
+    - _IndirectOcclusion: 1
     - _IndirectOcclusionNormalized: 0
-    - _IndirectSaturation: 1.2
-    - _LodBase: -10
-    - _LodOffset: 5
+    - _IndirectSaturation: 0.8
+    - _LodBase: 0
+    - _LodOffset: 0.1
     - _MaxSteps: 75
     - _Metallic: 0
     - _Mode: 0
     - _NewShading: 1
-    - _Normalized: 0.1
+    - _Normalized: 0.16
     - _NormalmapState: 1
     - _NormalsIntensity: 1
     - _OcclusionStrength: 1
     - _OrthographicPerspective: 0
     - _Parallax: 0.02
-    - _RenderQueue: 2501
+    - _RenderQueue: 2522.2
     - _RenderShadowsOnly: 0
     - _SSShadows: 0
     - _ShowStepCount: 0
-    - _SilverLining: 0.5
+    - _SilverLining: 0.8
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SphereHorizonStretch: 0.33
@@ -119,19 +119,19 @@ Material:
     - _StepSize: 0.3
     - _StepSkip: 1
     - _Tiling: 1500
-    - _TimeMult: 0.5
-    - _TimeMultSecondLayer: 3
+    - _TimeMult: 2
+    - _TimeMultSecondLayer: 4
     - _UVSec: 0
     - _VolumetricSSShadows: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.990566, g: 0.9485137, b: 0.9485137, a: 1}
+    - _BaseColor: {r: 0.56, g: 0.56, b: 0.56, a: 1}
     - _CloudSpherePosition: {r: 0, g: 0, b: 0, a: 0}
-    - _CloudTransform: {r: 300, g: 30, b: 0, a: 0}
+    - _CloudTransform: {r: 700, g: 30, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _CoverageChannel: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Shading: {r: 0.31132078, g: 0.3069153, b: 0.3069153, a: 1}
+    - _Shading: {r: 0.31132078, g: 0.30397832, b: 0.30397832, a: 0.15294118}
     - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SkyLightAttenuation: {r: 1, g: 1, b: 1, a: 1}
+    - _SkyLightAttenuation: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _WindDirection: {r: 0, g: 0, b: 1, a: 0}
