@@ -15,6 +15,10 @@ public class AudioController : MonoBehaviour
     public AudioSource airResistLeft;
     public AudioSource airRestRight;
 
+    public AudioSource vulkanReady;
+    public AudioSource vulkanShot;
+    public AudioSource vulkanEnd;
+
     [Header("values")]
     private float currForce;
     private float throttle;

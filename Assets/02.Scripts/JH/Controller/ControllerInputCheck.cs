@@ -96,6 +96,7 @@ public class ControllerInputCheck : MonoBehaviour
 
         //왼쪽 컨트롤러 메뉴 버튼은 카메라 위치 변경에 사용됨 (SetCamposition.cs)
         //왼쪽 컨트롤러 그랩 버튼은 HUD 변경에 사용됨. (F16HUDManager.cs)
+        //왼쪽 컨트롤러 트리거 버튼은 무기 발사에 사용됨 (ArmController.cs)
 
         //------------------------------------왼쪽 컨트롤러 갱신 영역 끝
     }
