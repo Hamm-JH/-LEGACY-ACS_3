@@ -3697,6 +3697,10 @@ PrefabInstance:
       propertyPath: aviationManager
       value: 
       objectReference: {fileID: 9199027334123837869}
+    - target: {fileID: 1516222753, guid: 76f1069ad96db924896e2521bb6bde77, type: 3}
+      propertyPath: gearAnimator
+      value: 
+      objectReference: {fileID: 9199027333458482882}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76f1069ad96db924896e2521bb6bde77, type: 3}
 --- !u!224 &1200354885316797248 stripped
@@ -4209,7 +4213,12 @@ PrefabInstance:
     - target: {fileID: 7445444425241520049, guid: ba6b6d979737b5c4a84536b4848a1900,
         type: 3}
       propertyPath: savedTextUV0.x
-      value: 0.171875
+      value: 0.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445444425241520049, guid: ba6b6d979737b5c4a84536b4848a1900,
+        type: 3}
+      propertyPath: savedTextUV0.y
+      value: 0.18359375
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba6b6d979737b5c4a84536b4848a1900, type: 3}
@@ -4456,31 +4465,6 @@ PrefabInstance:
       propertyPath: ThirdPersonView
       value: 
       objectReference: {fileID: 651306809658082363}
-    - target: {fileID: 5929927422365535471, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5929927422365535471, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: blocksRaycasts
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5929927422365535471, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: raycastMyLayerOnly
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5929927424128981490, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9018791428337627859, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8195271052931704030, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: aviationManager
@@ -4491,60 +4475,55 @@ PrefabInstance:
       propertyPath: fighterBody
       value: 
       objectReference: {fileID: 9199027333458182847}
+    - target: {fileID: 8195271052931704030, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: fighterAnimator
+      value: 
+      objectReference: {fileID: 9199027333458482882}
     - target: {fileID: 3669277443990926376, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: aviationManager
       value: 
       objectReference: {fileID: 9199027334123837869}
-    - target: {fileID: 5118680595560552073, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: savedTextUV0.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118680595560552073, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: savedTextUV0.y
-      value: 0.0390625
-      objectReference: {fileID: 0}
-    - target: {fileID: 5118680595819512038, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: savedTextUV0.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5118680595819512038, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: savedTextUV0.y
-      value: 0.0390625
-      objectReference: {fileID: 0}
-    - target: {fileID: 6172757062461786426, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: savedTextUV0.x
-      value: 0.3359375
+      value: 0.3515625
       objectReference: {fileID: 0}
     - target: {fileID: 6172757062461786426, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: savedTextUV0.y
-      value: 0
+      value: 0.3515625
       objectReference: {fileID: 0}
     - target: {fileID: 8424763466517539430, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: savedTextUV0.x
-      value: 0
+      value: 0.453125
       objectReference: {fileID: 0}
     - target: {fileID: 8424763466517539430, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: savedTextUV0.y
-      value: 0.20703125
+      value: 0.1171875
       objectReference: {fileID: 0}
-    - target: {fileID: 295271992090401848, guid: e2f5e32978d281646926e80d6ee0bbd9,
+    - target: {fileID: 1850089350877498520, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0016098022
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850089350877498520, guid: e2f5e32978d281646926e80d6ee0bbd9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -43.880005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850089350877498521, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: savedTextUV0.x
-      value: 0.3359375
+      value: 0.5546875
       objectReference: {fileID: 0}
-    - target: {fileID: 295271992090401848, guid: e2f5e32978d281646926e80d6ee0bbd9,
+    - target: {fileID: 1850089350877498521, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: savedTextUV0.y
-      value: 0
+      value: 0.16601562
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f5e32978d281646926e80d6ee0bbd9, type: 3}
@@ -4742,12 +4721,12 @@ PrefabInstance:
     - target: {fileID: 6555893690655149377, guid: 9c992b6eefc71e14893cc303d2adaa1b,
         type: 3}
       propertyPath: savedTextUV0.x
-      value: 0.0390625
+      value: 0.35546875
       objectReference: {fileID: 0}
     - target: {fileID: 6555893690655149377, guid: 9c992b6eefc71e14893cc303d2adaa1b,
         type: 3}
       propertyPath: savedTextUV0.y
-      value: 0
+      value: 0.16210938
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c992b6eefc71e14893cc303d2adaa1b, type: 3}
