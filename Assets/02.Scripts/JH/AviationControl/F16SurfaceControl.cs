@@ -61,7 +61,7 @@ public class F16SurfaceControl : MonoBehaviour
         UpTime = 0;
         DownTime = 0;
 
-        fighterBody.centerOfMass = new Vector3(0, fighterBody.centerOfMass.y, -1f);
+        fighterBody.centerOfMass = new Vector3(0, fighterBody.centerOfMass.y, 0.5f);
         //print(fighterBody.centerOfMass.x);
         //fighterBody.centerOfMass = new Vector3();
     }
