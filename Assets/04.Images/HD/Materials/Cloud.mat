@@ -82,7 +82,7 @@ Material:
     - _DirectContribution: 1
     - _DistBlendPost: 0
     - _DistanceBlend: 1
-    - _DrawDistance: 10000
+    - _DrawDistance: 5000
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -91,14 +91,14 @@ Material:
     - _IndirectContribution: 1
     - _IndirectOcclusion: 5
     - _IndirectOcclusionNormalized: 0
-    - _IndirectSaturation: 0.8
+    - _IndirectSaturation: 1.2
     - _LodBase: -10
     - _LodOffset: 5
     - _MaxSteps: 75
     - _Metallic: 0
     - _Mode: 0
     - _NewShading: 1
-    - _Normalized: 0.16
+    - _Normalized: 0.1
     - _NormalmapState: 1
     - _NormalsIntensity: 1
     - _OcclusionStrength: 1
@@ -108,7 +108,7 @@ Material:
     - _RenderShadowsOnly: 0
     - _SSShadows: 0
     - _ShowStepCount: 0
-    - _SilverLining: 0.8
+    - _SilverLining: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SphereHorizonStretch: 0.33
@@ -119,19 +119,19 @@ Material:
     - _StepSize: 0.3
     - _StepSkip: 1
     - _Tiling: 1500
-    - _TimeMult: 0.1
-    - _TimeMultSecondLayer: 4
+    - _TimeMult: 0.5
+    - _TimeMultSecondLayer: 3
     - _UVSec: 0
     - _VolumetricSSShadows: 0
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.56, g: 0.56, b: 0.56, a: 1}
+    - _BaseColor: {r: 0.990566, g: 0.9485137, b: 0.9485137, a: 1}
     - _CloudSpherePosition: {r: 0, g: 0, b: 0, a: 0}
-    - _CloudTransform: {r: 200, g: 20, b: 0, a: 0}
+    - _CloudTransform: {r: 300, g: 30, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _CoverageChannel: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Shading: {r: 0.31132078, g: 0.3069153, b: 0.3069153, a: 1}
     - _ShadowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SkyLightAttenuation: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SkyLightAttenuation: {r: 1, g: 1, b: 1, a: 1}
     - _WindDirection: {r: 0, g: 0, b: 1, a: 0}
