@@ -87,6 +87,9 @@ public class ControllerInputCheck : MonoBehaviour
 								  , ((RTrackpadDragged.axis.y + 1f) / 2)
 								  , 0.1f);
 		}
+        
+        //오른쪽 컨트롤러 그랩 버튼은 기어 올리고 내리는데 사용됨. (GearControl.cs)
+
         //------------------------------------오른쪽 컨트롤러 갱신 영역 끝
 
         //------------------------------------왼쪽 컨트롤러 갱신 영역 시작
