@@ -28,7 +28,7 @@ public class StatusIP : MonoBehaviour
         {
             landingGearStatus.text = "UP";
         }
-        else if(gearAnimator.GetBool("gearState") == false) {
+        else if(gearAnimator.GetBool("GearState") == false) {
             landingGearStatus.text = "DOWN";
         }
 
