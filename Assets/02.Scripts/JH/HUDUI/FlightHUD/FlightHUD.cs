@@ -10,6 +10,8 @@ public class FlightHUD : MonoBehaviour
     public Transform fighterBody;
     public Transform cam;       //HeadingMeter 바꿀 카메라각도
 
+    public Animator fighterAnimator;
+
     [Header ("heading meter")]
     public RawImage headingMeter;   //보는 방향 알려주는 눈금
 
@@ -20,6 +22,7 @@ public class FlightHUD : MonoBehaviour
     [Header("flight status")]
     public Text speedText;          //속도계
     public Text throttleText;       //출력계
+    public Text gearText;           //기어 상태계
 
     public Transform HUDInnerRing;  //비행 각도 출력
     public Transform extendWing;    //비행각도계
@@ -42,6 +45,15 @@ public class FlightHUD : MonoBehaviour
 
         speedText.text = aviationManager.thrustControl.currForce.ToString("N1");
         throttleText.text = (aviationManager.throttle * 40).ToString("N2");
+
+        if(fighterAnimator.GetBool("GearState") == true)
+        {
+            gearText.text = "GEAR ON";
+        }
+        else if(fighterAnimator.GetBool("GearState") == false)
+        {
+            gearText.text = "GEAR OFF";
+        }
 
         //비행체 회전각도 보여주기
         extendWing.localRotation = Quaternion.Euler(new Vector3(0, 0, 360 - fighterBody.rotation.eulerAngles.z));

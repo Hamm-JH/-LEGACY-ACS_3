@@ -890,7 +890,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459723327489601248}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: cb308003baab994468cf5bb79d58fb8f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -983,7 +983,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459723327489601256}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 01afcceb1375aa44385eef77d565ded6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1076,7 +1076,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459723327489601258}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 01afcceb1375aa44385eef77d565ded6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4285,12 +4285,7 @@ PrefabInstance:
     - target: {fileID: 7445444425241520049, guid: ba6b6d979737b5c4a84536b4848a1900,
         type: 3}
       propertyPath: savedTextUV0.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7445444425241520049, guid: ba6b6d979737b5c4a84536b4848a1900,
-        type: 3}
-      propertyPath: savedTextUV0.y
-      value: 0.046875
+      value: 0.171875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba6b6d979737b5c4a84536b4848a1900, type: 3}
@@ -4457,16 +4452,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: F16[CameraRig]
       objectReference: {fileID: 0}
-    - target: {fileID: 507093870658210429, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 507093870657145849, guid: e2f5e32978d281646926e80d6ee0bbd9,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 507093870659088551, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4595,7 +4580,7 @@ PrefabInstance:
     - target: {fileID: 5118680595560552073, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: savedTextUV0.y
-      value: 0.0859375
+      value: 0.0390625
       objectReference: {fileID: 0}
     - target: {fileID: 5118680595819512038, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
@@ -4605,7 +4590,7 @@ PrefabInstance:
     - target: {fileID: 5118680595819512038, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: savedTextUV0.y
-      value: 0.0859375
+      value: 0.0390625
       objectReference: {fileID: 0}
     - target: {fileID: 6172757062461786426, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
@@ -4620,12 +4605,12 @@ PrefabInstance:
     - target: {fileID: 8424763466517539430, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: savedTextUV0.x
-      value: 0.109375
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8424763466517539430, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
       propertyPath: savedTextUV0.y
-      value: 0
+      value: 0.20703125
       objectReference: {fileID: 0}
     - target: {fileID: 295271992090401848, guid: e2f5e32978d281646926e80d6ee0bbd9,
         type: 3}
@@ -4857,12 +4842,12 @@ PrefabInstance:
     - target: {fileID: 6555893690655149377, guid: 9c992b6eefc71e14893cc303d2adaa1b,
         type: 3}
       propertyPath: savedTextUV0.x
-      value: 0
+      value: 0.0390625
       objectReference: {fileID: 0}
     - target: {fileID: 6555893690655149377, guid: 9c992b6eefc71e14893cc303d2adaa1b,
         type: 3}
       propertyPath: savedTextUV0.y
-      value: 0.0078125
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c992b6eefc71e14893cc303d2adaa1b, type: 3}
@@ -4999,6 +4984,16 @@ PrefabInstance:
       propertyPath: raderLine
       value: 
       objectReference: {fileID: 3130861737003851055}
+    - target: {fileID: 4803338625654168145, guid: 81eaf040fc6ba3f4da55ece4ea45d4d1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7951761
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803338625654168145, guid: 81eaf040fc6ba3f4da55ece4ea45d4d1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.6063787
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81eaf040fc6ba3f4da55ece4ea45d4d1, type: 3}
 --- !u!224 &3130861737003851055 stripped

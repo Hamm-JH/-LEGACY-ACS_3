@@ -5,8 +5,13 @@ using UnityEngine.UI;
 
 public class StatusIP : MonoBehaviour
 {
+    [Header ("Aviation manager")]
     public AviationManager aviationManager;
 
+    [Header("gear status")]
+    public Animator gearAnimator;
+
+    [Header ("status text")]
     public Text landingGearStatus;
     public Text afterBurnerStatus;
 
@@ -19,7 +24,14 @@ public class StatusIP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(gearAnimator.GetBool("GearState") == true)
+        {
+            landingGearStatus.text = "UP";
+        }
+        else if(gearAnimator.GetBool("gearState") == false) {
+            landingGearStatus.text = "DOWN";
+        }
+
         //부스터 상태 출력
         switch(aviationManager.booster)
         {
