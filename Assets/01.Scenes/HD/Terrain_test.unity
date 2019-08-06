@@ -211,6 +211,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1499192030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1499192032}
+  - component: {fileID: 1499192031}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1499192031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499192030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f03c95ca65f8bd448aad7085afe4e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConfigUrl: https://cdn.melown.com/vts/melown2015/unity/world/mapConfig.json
+  AuthUrl: 
+  CreateConfig: 
+  RunConfig: '{ "targetResourcesMemoryKB":500000 }'
+  Statistics: This will show statistics at play
+--- !u!4 &1499192032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499192030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9657.541, y: 18.835535, z: -6758.4272}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1910976208
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +270,8 @@ GameObject:
   - component: {fileID: 1910976211}
   - component: {fileID: 1910976210}
   - component: {fileID: 1910976209}
+  - component: {fileID: 1910976213}
+  - component: {fileID: 1910976212}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -294,3 +344,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1910976212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910976208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2417faadb4a70914e870d66aa22cdff4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mousePanSpeed: 30
+  mouseRotateSpeed: 30
+  mouseZoomSpeed: 10
+--- !u!114 &1910976213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910976208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c110c4c929ab5e946ac72d92442e43e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapObject: {fileID: 1499192030}
+  controlTransformation: 0
+  controlNearFar: 0
+  Config: '{ "traverseModeSurfaces":3, "maxTexelToPixelScale":1.2 }'
+  Statistics: This will show statistics at play
+  atmosphere: 0
+  backgroundMaterial: {fileID: 2100000, guid: 3e83f2df2a270e94ca3c325a39ebd735, type: 2}
+  backgroundMesh: {fileID: 4300000, guid: b0f11f207ae451f49bddfbaf9690e9cb, type: 3}
+  opaqueMaterial: {fileID: 2100000, guid: d959ee906a1141742a0a0e846fe01868, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: 185ea5bd609af1146917eaef98ec5ab9, type: 2}
