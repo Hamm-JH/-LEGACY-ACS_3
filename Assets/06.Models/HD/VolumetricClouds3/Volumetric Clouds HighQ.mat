@@ -43,7 +43,7 @@ Material:
     - _DirectContribution: 1
     - _DistBlendPost: 0
     - _DistanceBlend: 0
-    - _DrawDistance: 10000
+    - _DrawDistance: 15000
     - _HQPointLight: 1
     - _IndirectContribution: 1
     - _IndirectOcclusion: 1

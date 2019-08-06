@@ -113,7 +113,7 @@ MonoBehaviour:
   savedUp: {x: 2.9857577e-15, y: 1, z: 0.0000000061288588}
   savedRectSize: {x: 232, y: 99}
   savedColor: {r: 0.15886435, g: 0.6603774, b: 0.1779091, a: 1}
-  savedTextUV0: {x: 0, y: 0.25}
+  savedTextUV0: {x: 0, y: 0.06640625}
   savedFill: 0
 --- !u!1 &290596876292838181
 GameObject:
@@ -339,8 +339,8 @@ Transform:
   m_Children:
   - {fileID: 507093870659034197}
   - {fileID: 507093870659106953}
-  - {fileID: 1297989331970003675}
   - {fileID: 8702788996851834443}
+  - {fileID: 1297989331970003675}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -597,7 +597,7 @@ Transform:
   m_Children:
   - {fileID: 5929927422365535470}
   m_Father: {fileID: 507093870659088551}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 9.400001, y: 0, z: 0}
 --- !u!20 &1317965340109126273
 Camera:
@@ -715,7 +715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0016136, y: -43.88}
+  m_AnchoredPosition: {x: 0.0016098022, y: -43.880005}
   m_SizeDelta: {x: 345.85, y: 18.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1850089350877498516
@@ -794,7 +794,7 @@ MonoBehaviour:
   savedUp: {x: 2.9857577e-15, y: 1, z: 0.0000000061288588}
   savedRectSize: {x: 480.88998, y: 204.95001}
   savedColor: {r: 0.15886435, g: 0.6603774, b: 0.1779091, a: 1}
-  savedTextUV0: {x: 0.42578125, y: 0}
+  savedTextUV0: {x: 0.19140625, y: 0.13867188}
   savedFill: 0
 --- !u!1 &1952686936557684985
 GameObject:
@@ -3978,7 +3978,7 @@ MonoBehaviour:
   savedUp: {x: 2.9857577e-15, y: 1, z: 0.0000000061288588}
   savedRectSize: {x: 232, y: 99}
   savedColor: {r: 0.15886435, g: 0.6603774, b: 0.1779091, a: 1}
-  savedTextUV0: {x: 0, y: 0.25}
+  savedTextUV0: {x: 0, y: 0.06640625}
   savedFill: 0
 --- !u!1 &8424763466517539428
 GameObject:
@@ -4078,7 +4078,7 @@ MonoBehaviour:
   savedUp: {x: 2.9857577e-15, y: 1, z: 0.0000000061288588}
   savedRectSize: {x: 140.97, y: 81.85}
   savedColor: {r: 0.048727296, g: 0.6886792, b: 0.048727296, a: 1}
-  savedTextUV0: {x: 0.4140625, y: 0.1484375}
+  savedTextUV0: {x: 0.02734375, y: 0}
   savedFill: 0
 --- !u!114 &8424763466517539425
 MonoBehaviour:
@@ -4515,7 +4515,7 @@ Transform:
   m_Children:
   - {fileID: 8702788997435467272}
   m_Father: {fileID: 507093870659088551}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8702788996851834442
 MonoBehaviour:
@@ -4853,6 +4853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c0acf162264454c9e31cd12d49e175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  armController: {fileID: 0}
   aviationManager: {fileID: 0}
   fighterBody: {fileID: 507093870659088551}
   cam: {fileID: 1297989331970003675}
@@ -4860,3 +4861,4 @@ MonoBehaviour:
   speedText: {fileID: 4247089941071123678}
   throttleText: {fileID: 3181163798382014200}
   extendWing: {fileID: 3108702859724991564}
+  vulkanStat: {fileID: 0}
