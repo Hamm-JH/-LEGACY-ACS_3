@@ -589,7 +589,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &660869559
+--- !u!21 &703658561
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!43 &1105314889
+--- !u!43 &1308986580
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -949,23 +949,81 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 660869559}
+      objectReference: {fileID: 703658561}
     - target: {fileID: 145270019235484695, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1105314889}
-    - target: {fileID: 628676459, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.00000025556147
-      objectReference: {fileID: 0}
-    - target: {fileID: 628676459, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1, type: 3}
-      propertyPath: m_LocalRotation.y
+      objectReference: {fileID: 1308986580}
+    - target: {fileID: 4801302587982411894, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 628676459, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 179.99998
+    - target: {fileID: 4374051719551923049, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760689014936043, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760689014936043, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1089.8354
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760689489483972, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760689014936039, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760689014936036, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760689014936037, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760689014936042, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760689014936042, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_ShowMaskGraphic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760690579161021, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.02745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760690579161021, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_FillCenter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760690579161021, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923760690579160898, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1,
+        type: 3}
+      propertyPath: m_ShowMaskGraphic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7bcaf13b0d2fda4e9c004da3ccd10f1, type: 3}
