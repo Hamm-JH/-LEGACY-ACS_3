@@ -16,23 +16,23 @@ public class ThrustControl : MonoBehaviour
 	public Rigidbody fighterBody;
 
 	[Header ("Force values")]
-	public float currForce		= 0f;					//현재 추력값
-	public float ADCeleration	= 0f;					//감가속치
-	public float TorqueResist	= 0f;					//회전항력
-    public float BrakeResist    = 0f;                   //브레이크 저항력
+    [HideInInspector] public float currForce		= 0f;   //현재 추력값
+    [HideInInspector] public float ADCeleration	= 0f;       //감가속치
+    [HideInInspector] public float TorqueResist	= 0f;		//회전항력
+    [HideInInspector] public float BrakeResist    = 0f;     //브레이크 저항력
 
 	[Header("Torque_values")]
-	public Quaternion controlAngle;
+    [HideInInspector] public Quaternion controlAngle;
 
 	[Header("inputCheck")]
-	[HideInInspector] public int boosterValue;			//감가속치 계산에 쓸 booster bool값 변환 변수
-	[HideInInspector] public float throttle;            //감가속치 계산에 쓸 throttle변수
-    public int brakeButton;
+	[HideInInspector] public int boosterValue;			    //감가속치 계산에 쓸 booster bool값 변환 변수
+	[HideInInspector] public float throttle;                //감가속치 계산에 쓸 throttle변수
+    [HideInInspector] public int brakeButton;               //
 
 	[Header("Speed_boundary")]
-	[HideInInspector] public float _minimumSpeedBoundary; //최소 속도경계
-	[HideInInspector] public float _normalSpeedBoundary;  //평균 속도경계
-	[HideInInspector] public float _maxSpeedBoundary;     //최대 속도경계
+	[HideInInspector] public float _minimumSpeedBoundary;   //최소 속도경계
+	[HideInInspector] public float _normalSpeedBoundary;    //평균 속도경계
+	[HideInInspector] public float _maxSpeedBoundary;       //최대 속도경계
 	#endregion
 
 	#region private_value
@@ -105,12 +105,9 @@ public class ThrustControl : MonoBehaviour
 			//이착륙 상태
 			case 0:
                 //- 이착륙 상태 구함
-                //쓰로틀 출력구함
-                throttleVal = Mathf.Pow((throttle + 0.45f), 2);
-				//부스터 출력구함
-				boosterVal = boosterValue * Mathf.Pow(throttle, 2);
-				//감가속치 구함(가중치 제외)
-				ADCeleration = ((throttleVal + boosterVal));
+                throttleVal = Mathf.Pow((throttle + 0.45f), 2);         //쓰로틀 출력구함
+				boosterVal = boosterValue * Mathf.Pow(throttle, 2);     //부스터 출력구함
+				ADCeleration = ((throttleVal + boosterVal));            //감가속치 구함(가중치 제외)
 
                 BrakeResist = (float)brakeButton * 10f;
                 //5배 더올림
@@ -120,28 +117,22 @@ public class ThrustControl : MonoBehaviour
 			case 1:
                 
                 //- 일반 비행상태 구함
-                //쓰로틀 출력구함
-                throttleVal = throttle;
-				//부스터 출력구함
-				boosterVal = boosterValue * throttle;
-                //감가속치 구함(가중치 제외)
+                throttleVal = throttle;                                 //쓰로틀 출력구함
+				boosterVal = boosterValue * throttle;                   //부스터 출력구함
                 ADCeleration = (((throttleVal + boosterVal) / 2)
                                * Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 3))
-                               + 1f;
+                               + 1f;                                    //감가속치 구함(가중치 제외)
                 BrakeResist = (float)brakeButton * 10f;
                 break;
 
 			//애프터버너 상태
 			case 2:
                 //- 애프터 버너 비행상태 구함
-                //쓰로틀 출력구함
-                throttleVal = throttle;
-                //부스터 출력구함
-                boosterVal = boosterValue * throttle;
-                //감가속치 구함(가중치 제외)
+                throttleVal = throttle;                                 //쓰로틀 출력구함
+                boosterVal = boosterValue * throttle;                   //부스터 출력구함
                 ADCeleration = (((throttleVal + boosterVal) / 2)
                                * Mathf.Log(Mathf.Epsilon + (_normalSpeedBoundary / _minimumSpeedBoundary) - (currForce / _minimumSpeedBoundary) + 1, 3))
-                               + 1f;
+                               + 1f;                                    //감가속치 구함(가중치 제외)
                 BrakeResist = (float)brakeButton * 10f;
                 //가속치 올리려고 1.2배 더 올림
                 //2배 더 올림

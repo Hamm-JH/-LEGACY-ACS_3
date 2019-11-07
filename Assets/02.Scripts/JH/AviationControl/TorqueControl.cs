@@ -15,16 +15,16 @@ public class TorqueControl : MonoBehaviour
 	public Rigidbody fighterBody;
 
 	[Header("Force values")]
-	public float currForce		= 0f;				//현재 추력값
-	public float TorqueResist	= 0f;				//회전항력
+    [HideInInspector] public float currForce		= 0f;               //현재 추력값
+    [HideInInspector] public float TorqueResist	= 0f;				//회전항력
 
 	[Header("Torque_values")]
 	[HideInInspector] public Quaternion controlAngle;
 
 	[Header("inputCheck")]
-	public float pitchVal = 0;
-	public float yawVal = 0;
-	public float rollVal = 0;
+    [HideInInspector] public float pitchVal = 0;
+    [HideInInspector] public float yawVal = 0;
+    [HideInInspector] public float rollVal = 0;
 
 	[Header("Speed_boundary")]
 	[HideInInspector] public float _minSB;	//최소 속도경계

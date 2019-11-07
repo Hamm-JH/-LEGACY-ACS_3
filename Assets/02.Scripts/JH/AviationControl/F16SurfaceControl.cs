@@ -35,7 +35,7 @@ public class F16SurfaceControl : MonoBehaviour
     private float BrakeRange;
 
     //사용 수학함수
-    public float Epsilon;
+    [HideInInspector] public float Epsilon;
     //public float PitchRollCheck;
 
     [Header("brake_roll_check")]
